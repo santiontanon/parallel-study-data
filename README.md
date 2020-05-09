@@ -24,9 +24,11 @@ The "data" folder contains one file for each time someone clicked on "test" or "
 
 To cide this data, please cite the following paper:
 
+```
 @inproceedings{kantharaju2018tracing,
   title={Tracing player knowledge in a parallel programming educational game},
   author={Kantharaju, Pavan and Alderfer, Katelyn and Zhu, Jichen and Char, Bruce and Smith, Brian and Ontan{\'o}n, Santiago},
   booktitle={Proceedings of the Fourteenth Artificial Intelligence and Interactive Digital Entertainment Conference (AIIDE 2018)},
   year={2018}
 }
+```
