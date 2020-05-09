@@ -1,0 +1,282 @@
+filename	/Users/tunguyen/Library/Application Support/unity.DefaultCompany.ParallelProg/play_out_8943449364598657962.txt
+timestamp	20171010132247
+
+METADATA
+level_id	9
+level_title	Intro to Parallel
+goal_string	Deliver Both Packages
+goal_struct	{"desired":[{"condition":"gt","thread_id":0,"property":"delivered","id":3001,"type":"delivery","value":0},{"condition":"gt","thread_id":0,"property":"delivered","id":3002,"type":"delivery","value":0}],"required":[{"condition":"gt","thread_id":0,"property":"delivered","id":3001,"type":"delivery","value":0},{"condition":"gt","thread_id":0,"property":"delivered","id":3002,"type":"delivery","value":0},{"condition":"gt","thread_id":0,"property":"delivered","id":1001,"type":"thread","value":0},{"condition":"gt","thread_id":0,"property":"delivered","id":1002,"type":"thread","value":0}]}
+player_palette	{"painter":{"count":0},"semaphore":{"count":-1},"signal":{"count":-1},"colors":{"count":1}}
+time_pickup_min	0
+time_delivery_min	1
+time_exchange_min	0
+time_pickup_max	0
+time_delivery_max	3
+time_exchange_max	0
+board_width	12
+board_height	12
+
+LAYOUT
+FEEEEEEEEEEC
+J----------J
+J------FEEEK
+J------J---J
+J------J---J
+J------J---J
+J------LEEEK
+NEEEC------J
+J---J------J
+J---J------J
+J---J------J
+LEEEMEEEEEEI
+
+COLORS
+############
+#----------#
+#------!!!!#
+#------!---"
+#------!---"
+#------!---"
+#------!!!!#
+#####------#
+#---#------#
+#---#------#
+#---#------#
+############
+
+DIRECTIONS
+>>>>>>>>>>>V
+A          V
+A      V<<<X
+A      V   V
+A      V   V
+A      V   V
+A      >>>>V
+A<<<<      V
+A   A      V
+A   A      V
+A   A      V
+A<<<X<<<<<<<
+
+COMPONENTS
+9029	signal	8	0	P	E	{"color":0,"link":9027,"passed":0}
+9025	semaphore	2	0	P	E	{"stopped":0,"color":0,"passed":0,"value":0}
+5001	conditional	11	2	S	L	{"current":1,"color":0,"directions":["South","West"],"passed":0}
+4001	diverter	4	11	S	L	{"color":0,"direction_condition":"West","directions_colors":[[],[],[],[]],"passed":0,"directions_types":[["Conditional"],[],[],["Limited"]],"direction_default":"West"}
+3002	delivery	1	11	S	L	{"accepted_types":["Conditional"],"color":0,"missed":0,"delivered":0,"passed":0,"accepted_colors":[],"strict":0,"consumer":-1,"denominator":1}
+3001	delivery	3	7	S	L	{"accepted_types":["Limited"],"color":0,"missed":0,"delivered":0,"passed":0,"accepted_colors":[],"strict":0,"consumer":-1,"denominator":1}
+2002	pickup	11	5	S	L	{"color":1,"picked":0,"passed":0,"type":"Conditional"}
+2001	pickup	7	4	S	L	{"color":1,"picked":0,"passed":0,"type":"Limited"}
+1002	thread	5	0	S	L	{"time_pickup_min":-1,"color":2,"initial_direction":"East","missed":0,"time_delivery_max":-1,"delivered":0,"time_exchange_max":-1,"capacity":-1,"time_pickup_max":-1,"delay":0,"picked":0,"time_delivery_min":-1,"passed":0,"time_exchange_min":-1,"direction":"East"}
+1001	thread	1	0	S	L	{"time_pickup_min":-1,"color":1,"initial_direction":"East","missed":0,"time_delivery_max":-1,"delivered":0,"time_exchange_max":-1,"capacity":-1,"time_pickup_max":-1,"delay":0,"picked":0,"time_delivery_min":-1,"passed":0,"time_exchange_min":-1,"direction":"East"}
+9026	signal	11	1	P	E	{"color":0,"link":9025,"passed":0}
+9027	semaphore	11	0	P	E	{"stopped":0,"color":0,"passed":0,"value":0}
+9028	signal	8	2	P	E	{"color":0,"link":9027,"passed":0}
+
+EXECUTION
+S	235	1001	7	5	{"speed":0.0}
+M	0	1002	5	0	
+M	0	1001	1	0	
+M	1	1002	6	0	
+M	3	1002	8	0	
+M	4	1002	9	0	
+M	6	1002	11	0	
+M	7	1002	11	1	
+M	8	1002	11	2	
+M	8	1001	2	0	
+M	9	1002	10	2	
+M	10	1001	3	0	
+M	15	1001	8	0	
+M	16	1001	9	0	
+M	18	1001	11	0	
+M	19	1001	11	1	
+M	20	1001	11	2	
+M	21	1001	10	2	
+M	23	1001	8	2	
+M	24	1001	7	2	
+M	26	1001	7	4	
+M	27	1001	7	5	
+M	28	1001	7	6	
+M	32	1001	11	6	
+M	37	1001	11	11	
+M	44	1001	4	11	
+M	48	1001	4	7	
+M	49	1001	3	7	
+M	50	1001	2	7	
+M	52	1001	0	7	
+M	59	1001	0	0	
+M	60	1001	1	0	
+M	61	1001	2	0	
+M	62	1001	3	0	
+M	67	1001	8	0	
+M	68	1001	9	0	
+M	70	1001	11	0	
+M	71	1001	11	1	
+M	72	1001	11	2	
+M	73	1001	10	2	
+M	75	1001	8	2	
+M	76	1001	7	2	
+M	78	1001	7	4	
+M	79	1001	7	5	
+M	80	1001	7	6	
+M	84	1001	11	6	
+M	89	1001	11	11	
+M	96	1001	4	11	
+M	99	1001	1	11	
+M	100	1001	0	11	
+M	104	1001	0	7	
+M	111	1001	0	0	
+M	112	1001	1	0	
+M	113	1001	2	0	
+M	114	1001	3	0	
+M	119	1001	8	0	
+M	120	1001	9	0	
+M	122	1001	11	0	
+M	123	1001	11	1	
+M	124	1001	11	2	
+M	125	1001	10	2	
+M	127	1001	8	2	
+M	128	1001	7	2	
+M	130	1001	7	4	
+M	131	1001	7	5	
+M	132	1001	7	6	
+M	136	1001	11	6	
+M	141	1001	11	11	
+M	148	1001	4	11	
+M	151	1001	1	11	
+M	152	1001	0	11	
+M	156	1001	0	7	
+M	163	1001	0	0	
+M	164	1001	1	0	
+M	165	1001	2	0	
+M	166	1001	3	0	
+M	171	1001	8	0	
+M	172	1001	9	0	
+M	174	1001	11	0	
+M	175	1001	11	1	
+M	176	1001	11	2	
+M	177	1001	10	2	
+M	179	1001	8	2	
+M	180	1001	7	2	
+M	182	1001	7	4	
+M	183	1001	7	5	
+M	184	1001	7	6	
+M	188	1001	11	6	
+M	193	1001	11	11	
+M	200	1001	4	11	
+M	203	1001	1	11	
+M	204	1001	0	11	
+M	208	1001	0	7	
+M	215	1001	0	0	
+M	216	1001	1	0	
+M	217	1001	2	0	
+M	218	1001	3	0	
+M	223	1001	8	0	
+M	224	1001	9	0	
+M	226	1001	11	0	
+M	227	1001	11	1	
+M	228	1001	11	2	
+M	229	1001	10	2	
+M	231	1001	8	2	
+M	232	1001	7	2	
+M	234	1001	7	4	
+M	235	1001	7	5	
+E	1	3002	1	11	{"denominator":-1}
+E	1	3001	3	7	{"denominator":-1}
+E	1	1002	5	0	{"passed":1}
+E	3	9027	11	0	{"value":1}
+E	4	9029	8	0	{"passed":1}
+E	6	9027	11	0	{"value":0}
+E	7	9025	2	0	{"value":1}
+E	7	9027	11	0	{"passed":1}
+E	8	9025	2	0	{"value":0}
+E	8	1001	1	0	{"passed":1}
+E	8	9026	11	1	{"passed":1}
+E	9	5001	11	2	{"passed":1}
+E	10	9025	2	0	{"passed":1}
+E	15	1002	5	0	{"passed":2}
+E	15	9027	11	0	{"value":1}
+E	16	9029	8	0	{"passed":2}
+E	18	9027	11	0	{"value":0}
+E	19	9025	2	0	{"value":1}
+E	19	9027	11	0	{"passed":2}
+E	20	9026	11	1	{"passed":2}
+E	21	5001	11	2	{"passed":2}
+E	23	9027	11	0	{"value":1}
+E	24	9028	8	2	{"passed":1}
+E	27	2001	7	4	{"available":0}
+E	27	2001	7	4	{"picked":1}
+E	27	2001	7	4	{"passed":1}
+E	27	1001	7	4	{"payload":[2001]}
+E	49	4001	4	11	{"passed":1}
+E	50	3001	3	7	{"delivered":1}
+E	50	3001	3	7	{"passed":1}
+E	50	1001	3	7	{"payload":[]}
+E	50	1001	3	7	{"delivered":1}
+D	50	1001	3	7	{"missed_items":[],"delivered_items":[2001],"delivered_to":3001}
+E	50	0	0	0	{"goals_completed":3}
+E	61	9025	2	0	{"value":0}
+E	61	1001	1	0	{"passed":2}
+E	62	9025	2	0	{"passed":2}
+E	67	1002	5	0	{"passed":3}
+E	68	9029	8	0	{"passed":3}
+E	70	9027	11	0	{"value":0}
+E	71	9025	2	0	{"value":1}
+E	71	9027	11	0	{"passed":3}
+E	72	9026	11	1	{"passed":3}
+E	73	5001	11	2	{"passed":3}
+E	75	9027	11	0	{"value":1}
+E	76	9028	8	2	{"passed":2}
+E	79	2001	7	4	{"passed":2}
+E	99	4001	4	11	{"passed":2}
+E	100	3002	1	11	{"passed":1}
+E	100	1001	1	11	{"payload":[]}
+E	113	9025	2	0	{"value":0}
+E	113	1001	1	0	{"passed":3}
+E	114	9025	2	0	{"passed":3}
+E	119	1002	5	0	{"passed":4}
+E	120	9029	8	0	{"passed":4}
+E	122	9027	11	0	{"value":0}
+E	123	9025	2	0	{"value":1}
+E	123	9027	11	0	{"passed":4}
+E	124	9026	11	1	{"passed":4}
+E	125	5001	11	2	{"passed":4}
+E	127	9027	11	0	{"value":1}
+E	128	9028	8	2	{"passed":3}
+E	131	2001	7	4	{"passed":3}
+E	151	4001	4	11	{"passed":3}
+E	152	3002	1	11	{"passed":2}
+E	152	1001	1	11	{"payload":[]}
+E	165	9025	2	0	{"value":0}
+E	165	1001	1	0	{"passed":4}
+E	166	9025	2	0	{"passed":4}
+E	171	1002	5	0	{"passed":5}
+E	172	9029	8	0	{"passed":5}
+E	174	9027	11	0	{"value":0}
+E	175	9025	2	0	{"value":1}
+E	175	9027	11	0	{"passed":5}
+E	176	9026	11	1	{"passed":5}
+E	177	5001	11	2	{"passed":5}
+E	179	9027	11	0	{"value":1}
+E	180	9028	8	2	{"passed":4}
+E	183	2001	7	4	{"passed":4}
+E	203	4001	4	11	{"passed":4}
+E	204	3002	1	11	{"passed":3}
+E	204	1001	1	11	{"payload":[]}
+E	217	9025	2	0	{"value":0}
+E	217	1001	1	0	{"passed":5}
+E	218	9025	2	0	{"passed":5}
+E	223	1002	5	0	{"passed":6}
+E	224	9029	8	0	{"passed":6}
+E	226	9027	11	0	{"value":0}
+E	227	9025	2	0	{"value":1}
+E	227	9027	11	0	{"passed":6}
+E	228	9026	11	1	{"passed":6}
+E	229	5001	11	2	{"passed":6}
+E	231	9027	11	0	{"value":1}
+E	232	9028	8	2	{"passed":5}
+E	235	2001	7	4	{"passed":5}
+E	235	0	0	0	{"final_condition":36}
+
+PLAYER
+

@@ -1,0 +1,348 @@
+filename	/Users/jv384/Library/Application Support/unity.DefaultCompany.ParallelProg/play_out_1544530775851682907.txt
+timestamp	20170725143215
+
+METADATA
+level_id	3
+level_title	More Roads
+goal_string	Deliver 4 packages with each arrow delivering at least 2
+goal_struct	{"desired":[],"required":[{"condition":"gt","thread_id":0,"property":"delivered","id":1001,"type":"thread","value":1},{"condition":"gt","thread_id":0,"property":"delivered","id":1002,"type":"thread","value":1},{"condition":"gt","thread_id":0,"property":"delivered","id":3001,"type":"delivery","value":1},{"condition":"gt","thread_id":0,"property":"delivered","id":3002,"type":"delivery","value":1}]}
+player_palette	{"painter":{"count":0},"semaphore":{"count":-1},"signal":{"count":-1},"colors":{"count":2}}
+time_pickup_min	0
+time_delivery_min	1
+time_exchange_min	0
+time_pickup_max	0
+time_delivery_max	3
+time_exchange_max	0
+board_width	8
+board_height	16
+
+LAYOUT
+-----FEC
+-----J-J
+-----NEI
+-----J--
+--FEEMEC
+--J----J
+FEOEEC-J
+J-J--J-J
+J-J--J-J
+J-LEEOEI
+J----J--
+LEGEEI--
+--J-----
+FEK-----
+J-J-----
+LEI-----
+
+COLORS
+-----"""
+-----"-"
+-----"""
+-----"--
+--""""""
+--"----"
+!!#!!!-"
+!-"--!-"
+!-"--!-"
+!-"""#""
+!----!--
+!!!!!!--
+--!-----
+!!!-----
+!-!-----
+!!!-----
+
+DIRECTIONS
+     >>V
+     A V
+     X<<
+     A  
+  X>>X>X
+  A    V
+X<X<<X V
+V A  A V
+V A  A V
+V X<<X<X
+V    A  
+X>X>>X  
+  V     
+>>X     
+A V     
+A<<     
+
+COMPONENTS
+5002	diverter	2	11	S	L	{"color":0,"direction_condition":"West","directions_colors":[[],[],[],[]],"passed":0,"directions_types":[[],["Empty"],["Conditional"],[]],"direction_default":"West"}
+5001	diverter	5	4	S	L	{"color":0,"direction_condition":"West","directions_colors":[[],[],[],[]],"passed":0,"directions_types":[[],[],["Conditional"],["Empty"]],"direction_default":"West"}
+5004	intersection	2	13	S	L	{"color":0,"directions":["South","South","South","South","South","South"],"passed":0}
+5003	intersection	5	2	S	L	{"color":0,"directions":["North","North","North","North","North","North"],"passed":0}
+3002	delivery	3	11	S	L	{"accepted_types":["Conditional"],"color":0,"missed":0,"delivered":0,"passed":0,"accepted_colors":[],"strict":0,"consumer":-1,"denominator":2}
+3001	delivery	7	7	S	L	{"accepted_types":["Conditional"],"color":0,"missed":0,"delivered":0,"passed":0,"accepted_colors":[],"strict":0,"consumer":-1,"denominator":2}
+2001	pickup	2	6	S	L	{"color":1,"picked":0,"passed":0,"type":"Conditional"}
+1002	thread	5	8	S	L	{"time_pickup_min":-1,"color":1,"initial_direction":"North","missed":0,"time_delivery_max":-1,"delivered":0,"time_exchange_max":-1,"capacity":-1,"time_pickup_max":-1,"delay":0,"picked":0,"time_delivery_min":-1,"passed":0,"time_exchange_min":-1,"direction":"North"}
+1001	thread	4	9	S	L	{"time_pickup_min":-1,"color":2,"initial_direction":"West","missed":0,"time_delivery_max":-1,"delivered":0,"time_exchange_max":-1,"capacity":-1,"time_pickup_max":-1,"delay":0,"picked":0,"time_delivery_min":-1,"passed":0,"time_exchange_min":-1,"direction":"West"}
+9003	semaphore	4	6	P	E	{"stopped":0,"color":0,"passed":0,"value":0}
+9004	signal	6	9	P	E	{"color":0,"link":9003,"passed":0}
+
+EXECUTION
+M	0	1002	5	8	
+M	0	1001	4	9	
+M	1	1001	3	9	
+M	2	1002	5	7	
+M	3	1002	5	6	
+M	3	1001	2	9	
+M	6	1001	2	6	
+M	7	1001	2	5	
+M	8	1001	2	4	
+M	11	1001	5	4	
+M	13	1001	7	4	
+M	16	1001	7	7	
+M	17	1001	7	8	
+M	18	1001	7	9	
+M	19	1001	6	9	
+M	20	1002	4	6	
+M	21	1002	3	6	
+M	21	1001	5	9	
+M	22	1002	2	6	
+M	22	1001	4	9	
+M	23	1002	1	6	
+M	23	1001	3	9	
+M	24	1001	2	9	
+M	27	1001	2	6	
+M	28	1002	0	6	
+M	33	1002	0	11	
+M	35	1002	2	11	
+M	28	1001	2	5	
+M	36	1002	3	11	
+M	36	1001	2	4	
+M	39	1001	5	4	
+M	40	1002	4	11	
+M	41	1001	5	2	
+M	43	1001	5	0	
+M	45	1001	7	0	
+M	47	1001	7	2	
+M	49	1001	5	2	
+M	50	1002	5	11	
+M	52	1002	5	9	
+M	53	1002	5	8	
+M	54	1002	5	7	
+M	56	1001	5	0	
+M	58	1001	7	0	
+M	60	1001	7	2	
+M	62	1001	5	2	
+M	64	1002	5	6	
+M	64	1001	5	0	
+M	66	1001	7	0	
+M	68	1001	7	2	
+M	70	1001	5	2	
+M	72	1001	5	0	
+M	74	1001	7	0	
+M	76	1001	7	2	
+M	78	1001	5	2	
+M	80	1001	5	0	
+M	82	1001	7	0	
+M	84	1001	7	2	
+M	86	1001	5	2	
+M	88	1001	5	0	
+M	90	1001	7	0	
+M	92	1001	7	2	
+M	94	1001	5	2	
+M	96	1001	5	0	
+M	98	1001	7	0	
+M	100	1001	7	2	
+M	102	1001	5	2	
+M	104	1001	5	0	
+M	106	1001	7	0	
+M	108	1001	7	2	
+M	110	1001	5	2	
+M	112	1001	5	0	
+M	114	1001	7	0	
+M	116	1001	7	2	
+M	118	1001	5	2	
+M	120	1001	5	0	
+M	122	1001	7	0	
+M	124	1001	7	2	
+M	126	1001	5	2	
+M	128	1001	5	0	
+M	130	1001	7	0	
+M	132	1001	7	2	
+M	134	1001	5	2	
+M	136	1001	5	0	
+M	138	1001	7	0	
+M	140	1001	7	2	
+M	142	1001	5	2	
+M	144	1001	5	0	
+M	146	1001	7	0	
+M	148	1001	7	2	
+M	150	1001	5	2	
+M	152	1001	5	0	
+M	154	1001	7	0	
+M	156	1001	7	2	
+M	158	1001	5	2	
+M	160	1001	5	0	
+M	162	1001	7	0	
+M	164	1001	7	2	
+M	166	1001	5	2	
+M	168	1001	5	0	
+M	170	1001	7	0	
+M	172	1001	7	2	
+M	174	1001	5	2	
+M	176	1001	5	0	
+M	178	1001	7	0	
+M	180	1001	7	2	
+M	182	1001	5	2	
+M	184	1001	5	0	
+M	186	1001	7	0	
+M	188	1001	7	2	
+M	190	1001	5	2	
+M	192	1001	5	0	
+M	194	1001	7	0	
+M	196	1001	7	2	
+M	198	1001	5	2	
+M	200	1001	5	0	
+M	202	1001	7	0	
+M	204	1001	7	2	
+M	206	1001	5	2	
+M	208	1001	5	0	
+M	210	1001	7	0	
+M	212	1001	7	2	
+M	214	1001	5	2	
+M	216	1001	5	0	
+M	218	1001	7	0	
+M	220	1001	7	2	
+M	222	1001	5	2	
+M	224	1001	5	0	
+M	226	1001	7	0	
+M	228	1001	7	2	
+M	230	1001	5	2	
+M	232	1001	5	0	
+M	234	1001	7	0	
+M	236	1001	7	2	
+M	238	1001	5	2	
+M	240	1001	5	0	
+M	242	1001	7	0	
+M	244	1001	7	2	
+M	246	1001	5	2	
+M	248	1001	5	0	
+M	250	1001	7	0	
+M	252	1001	7	2	
+M	254	1001	5	2	
+M	256	1001	5	0	
+M	258	1001	7	0	
+M	260	1001	7	2	
+M	262	1001	5	2	
+M	264	1001	5	0	
+M	266	1001	7	0	
+M	268	1001	7	2	
+M	270	1001	5	2	
+M	272	1001	5	0	
+M	274	1001	7	0	
+M	276	1001	7	2	
+M	278	1001	5	2	
+M	280	1001	5	0	
+M	282	1001	7	0	
+M	284	1001	7	2	
+M	286	1001	5	2	
+M	288	1001	5	0	
+M	290	1001	7	0	
+M	292	1001	7	2	
+M	294	1001	5	2	
+M	296	1001	5	0	
+M	298	1001	7	0	
+M	300	1001	7	2	
+M	302	1001	5	2	
+M	304	1001	5	0	
+M	306	1001	7	0	
+M	308	1001	7	2	
+M	310	1001	5	2	
+M	312	1001	5	0	
+M	314	1001	7	0	
+M	316	1001	7	2	
+M	318	1001	5	2	
+M	320	1001	5	0	
+M	322	1001	7	0	
+M	324	1001	7	2	
+M	326	1001	5	2	
+M	328	1001	5	0	
+M	330	1001	7	0	
+M	332	1001	7	2	
+M	334	1001	5	2	
+M	336	1001	5	0	
+M	338	1001	7	0	
+M	340	1001	7	2	
+M	342	1001	5	2	
+M	344	1001	5	0	
+M	346	1001	7	0	
+M	348	1001	7	2	
+M	350	1001	5	2	
+E	0	3002	3	11	{"denominator":-1}
+E	0	3001	7	7	{"denominator":-1}
+E	1	1001	4	9	{"passed":1}
+E	2	1002	5	8	{"passed":1}
+E	7	2001	2	6	{"available":0}
+E	7	2001	2	6	{"picked":1}
+E	7	2001	2	6	{"passed":1}
+E	7	1001	2	6	{"payload":[2001]}
+E	16	5001	5	4	{"passed":1}
+E	17	3001	7	7	{"delivered":1}
+E	17	3001	7	7	{"passed":1}
+E	17	2001	2	6	{"available":1}
+E	17	1001	7	7	{"payload":[]}
+E	17	1001	7	7	{"delivered":1}
+D	17	1001	7	7	{"missed_items":[],"delivered_items":[2001],"delivered_to":3001}
+E	19	9003	4	6	{"value":1}
+E	20	9003	4	6	{"value":0}
+E	21	9003	4	6	{"passed":1}
+E	21	9004	6	9	{"passed":1}
+E	23	2001	2	6	{"available":0}
+E	23	2001	2	6	{"picked":2}
+E	23	2001	2	6	{"passed":2}
+E	23	1001	4	9	{"passed":2}
+E	23	1002	2	6	{"payload":[2001]}
+E	35	2001	2	6	{"passed":3}
+E	39	5002	2	11	{"passed":1}
+E	49	5001	5	4	{"passed":2}
+E	49	5003	5	2	{"passed":1}
+E	49	3002	3	11	{"delivered":1}
+E	49	3002	3	11	{"passed":1}
+E	49	2001	2	6	{"available":1}
+E	49	1002	3	11	{"payload":[]}
+E	49	1002	3	11	{"delivered":1}
+D	49	1002	3	11	{"missed_items":[],"delivered_items":[2001],"delivered_to":3002}
+E	54	1002	5	8	{"passed":2}
+E	63	5003	5	2	{"passed":3}
+E	72	5003	5	2	{"passed":4}
+E	81	5003	5	2	{"passed":5}
+E	90	5003	5	2	{"passed":6}
+E	99	5003	5	2	{"passed":7}
+E	108	5003	5	2	{"passed":8}
+E	117	5003	5	2	{"passed":9}
+E	126	5003	5	2	{"passed":10}
+E	135	5003	5	2	{"passed":12}
+E	144	5003	5	2	{"passed":13}
+E	153	5003	5	2	{"passed":14}
+E	162	5003	5	2	{"passed":15}
+E	171	5003	5	2	{"passed":16}
+E	180	5003	5	2	{"passed":17}
+E	189	5003	5	2	{"passed":18}
+E	198	5003	5	2	{"passed":19}
+E	207	5003	5	2	{"passed":21}
+E	216	5003	5	2	{"passed":22}
+E	225	5003	5	2	{"passed":23}
+E	234	5003	5	2	{"passed":24}
+E	243	5003	5	2	{"passed":25}
+E	252	5003	5	2	{"passed":26}
+E	261	5003	5	2	{"passed":27}
+E	270	5003	5	2	{"passed":28}
+E	279	5003	5	2	{"passed":30}
+E	288	5003	5	2	{"passed":31}
+E	297	5003	5	2	{"passed":32}
+E	306	5003	5	2	{"passed":33}
+E	315	5003	5	2	{"passed":34}
+E	324	5003	5	2	{"passed":35}
+E	333	5003	5	2	{"passed":36}
+E	342	5003	5	2	{"passed":37}
+E	351	5003	5	2	{"passed":39}
+E	351	0	0	0	{"final_condition":132}
+
+PLAYER
+

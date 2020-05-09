@@ -1,0 +1,108 @@
+filename	C:\Users\User\AppData\LocalLow\DefaultCompany\ParallelProg\me_out_9045934399032699375.txt
+timestamp	20171008220911
+
+METADATA
+level_id	8
+level_title	Intro to Parallel
+goal_string	Deliver The Package
+goal_struct	{"desired":[{"condition":"gt","thread_id":0,"property":"delivered","id":3001,"type":"delivery","value":0}],"required":[{"condition":"gt","thread_id":0,"property":"delivered","id":3001,"type":"delivery","value":0}]}
+player_palette	{"painter":{"count":0},"semaphore":{"count":-1},"signal":{"count":-1},"colors":{"count":1}}
+time_pickup_min	0
+time_delivery_min	1
+time_exchange_min	0
+time_pickup_max	0
+time_delivery_max	3
+time_exchange_max	0
+board_width	9
+board_height	8
+
+LAYOUT
+FEEEGEEEC
+J---J---J
+J---J---J
+J---J---J
+J---J---J
+J---J---J
+J---J---J
+LEEEMEEEI
+
+COLORS
+!!!!#""""
+!---#---"
+!---#---"
+!---#---"
+!---#---"
+!---#---"
+!---#---"
+!!!!#""""
+
+DIRECTIONS
+V<<<X>>>V
+V   A   V
+V   A   V
+V   A   V
+V   A   V
+V   A   V
+V   A   V
+>>>>A<<<<
+
+COMPONENTS
+9028	semaphore	7	0	P	E	{"stopped":0,"color":0,"passed":0,"value":1}
+9027	signal	4	1	P	E	{"color":0,"link":9026,"passed":0}
+9026	semaphore	2	0	P	E	{"stopped":0,"color":0,"passed":0,"value":0}
+1001	thread	0	4	S	L	{"time_pickup_min":-1,"color":1,"initial_direction":"South","missed":0,"time_delivery_max":-1,"delivered":0,"time_exchange_max":-1,"capacity":-1,"time_pickup_max":-1,"delay":0,"picked":0,"time_delivery_min":-1,"passed":0,"time_exchange_min":-1,"direction":"South"}
+1002	thread	8	4	S	L	{"time_pickup_min":-1,"color":2,"initial_direction":"South","missed":0,"time_delivery_max":-1,"delivered":0,"time_exchange_max":-1,"capacity":-1,"time_pickup_max":-1,"delay":0,"picked":0,"time_delivery_min":-1,"passed":0,"time_exchange_min":-1,"direction":"South"}
+2001	pickup	6	7	S	L	{"color":1,"picked":0,"passed":0,"type":"Limited"}
+3001	delivery	6	0	S	L	{"accepted_types":["Limited"],"color":0,"missed":0,"delivered":0,"passed":0,"accepted_colors":[],"strict":0,"consumer":-1,"denominator":1}
+5001	conditional	4	0	S	L	{"current":0,"color":0,"directions":["West","East"],"passed":0}
+
+EXECUTION
+S	43	1001	3	0	{"speed":0.0}
+M	0	1001	0	4	
+M	0	1002	8	4	
+M	1	1001	0	5	
+M	1	1002	8	5	
+M	3	1001	0	7	
+M	3	1002	8	7	
+M	5	1002	6	7	
+M	7	1001	4	7	
+M	13	1001	4	1	
+M	14	1001	4	0	
+M	14	1002	5	7	
+M	15	1001	3	0	
+M	15	1002	4	7	
+M	21	1002	4	1	
+M	22	1001	2	0	
+M	22	1002	4	0	
+M	23	1001	1	0	
+M	23	1002	3	0	
+M	24	1001	0	0	
+M	28	1001	0	4	
+M	29	1001	0	5	
+M	31	1001	0	7	
+M	35	1001	4	7	
+M	41	1001	4	1	
+M	42	1001	4	0	
+M	43	1001	3	0	
+E	1	1001	0	4	{"passed":1}
+E	1	1002	8	4	{"passed":1}
+E	1	3001	6	0	{"denominator":-1}
+E	13	9026	2	0	{"value":1}
+E	14	9027	4	1	{"passed":1}
+E	14	2001	6	7	{"available":0}
+E	14	2001	6	7	{"picked":1}
+E	14	2001	6	7	{"passed":1}
+E	14	1002	6	7	{"payload":[2001]}
+E	21	5001	4	0	{"passed":1}
+E	22	9027	4	1	{"passed":2}
+E	22	9026	2	0	{"value":0}
+E	23	9026	2	0	{"passed":1}
+E	23	5001	4	0	{"passed":2}
+E	29	1001	0	4	{"passed":2}
+E	41	9026	2	0	{"value":1}
+E	42	9027	4	1	{"passed":3}
+E	43	5001	4	0	{"passed":3}
+E	43	0	0	0	{"final_condition":512,"goal_descriptions":["e24 A delivery point did not get all the packages it was supposed."],"goal_state":[false,false]}
+
+PLAYER
+

@@ -1,0 +1,110 @@
+filename	/Users/jv384/Library/Application Support/unity.DefaultCompany.ParallelProg/me_out_1182766567739869880.txt
+timestamp	20170801202730
+
+METADATA
+level_id	2
+level_title	More Arrows
+goal_string	Deliver 2 packages per arrow and to each delivery point
+goal_struct	{"desired":[{"condition":"gt","thread_id":0,"property":"delivered","id":3001,"type":"delivery","value":1},{"condition":"gt","thread_id":0,"property":"delivered","id":3002,"type":"delivery","value":1},{"condition":"gt","thread_id":0,"property":"delivered","id":1001,"type":"thread","value":1},{"condition":"gt","thread_id":0,"property":"delivered","id":1002,"type":"thread","value":1}],"required":[{"condition":"gt","thread_id":0,"property":"delivered","id":3001,"type":"delivery","value":1},{"condition":"gt","thread_id":0,"property":"delivered","id":3002,"type":"delivery","value":1}]}
+player_palette	{"painter":{"count":0},"semaphore":{"count":-1},"signal":{"count":-1},"colors":{"count":2}}
+time_pickup_min	0
+time_delivery_min	1
+time_exchange_min	0
+time_pickup_max	0
+time_delivery_max	3
+time_exchange_max	0
+board_width	8
+board_height	8
+
+LAYOUT
+FEEEGEEC
+J---J--J
+J---J--J
+J---J--J
+J---J--J
+J---J--J
+J---J--J
+LEEEMEEI
+
+COLORS
+########
+#---#--#
+#---#--#
+#---#--#
+#---#--#
+#---#--#
+#---#--#
+########
+
+DIRECTIONS
+V<<<X>>V
+V   A  V
+V   A  V
+V   A  V
+V   A  V
+V   A  V
+V   A  V
+>>>>A<<<
+
+COMPONENTS
+9006	signal	0	3	P	E	{"color":0,"link":9008,"passed":0}
+9005	semaphore	2	7	P	E	{"stopped":0,"color":0,"passed":0,"value":1}
+4001	intersection	4	7	S	L	{"color":0,"directions":["North","North","North","North","North","North"],"passed":0}
+5001	conditional	4	0	S	L	{"current":1,"color":0,"directions":["East","West"],"passed":0}
+3002	delivery	7	7	S	L	{"accepted_types":["Conditional"],"color":0,"missed":0,"delivered":0,"passed":0,"accepted_colors":[1,2],"strict":0,"consumer":-1,"denominator":2}
+3001	delivery	0	7	S	L	{"accepted_types":["Conditional"],"color":0,"missed":0,"delivered":0,"passed":0,"accepted_colors":[1,2],"strict":0,"consumer":-1,"denominator":2}
+2002	pickup	7	0	S	L	{"color":2,"picked":0,"passed":0,"type":"Conditional"}
+2001	pickup	0	0	S	L	{"color":1,"picked":0,"passed":0,"type":"Conditional"}
+1002	thread	4	5	S	L	{"time_pickup_min":-1,"color":2,"initial_direction":"North","missed":0,"time_delivery_max":-1,"delivered":0,"time_exchange_max":-1,"capacity":-1,"time_pickup_max":-1,"delay":0,"picked":0,"time_delivery_min":-1,"passed":0,"time_exchange_min":-1,"direction":"North"}
+1001	thread	4	2	S	L	{"time_pickup_min":-1,"color":1,"initial_direction":"North","missed":0,"time_delivery_max":-1,"delivered":0,"time_exchange_max":-1,"capacity":-1,"time_pickup_max":-1,"delay":0,"picked":0,"time_delivery_min":-1,"passed":0,"time_exchange_min":-1,"direction":"North"}
+9004	signal	4	4	P	E	{"color":0,"link":5001,"passed":0}
+9007	semaphore	5	7	P	E	{"stopped":0,"color":0,"passed":0,"value":1}
+9008	semaphore	4	1	P	E	{"stopped":0,"color":0,"passed":0,"value":1}
+
+EXECUTION
+S	20	1001	4	2	{"speed":0.0}
+M	0	1002	4	5	
+M	0	1001	4	2	
+M	1	1002	4	4	
+M	1	1001	4	1	
+M	2	1002	4	3	
+M	2	1001	4	0	
+M	3	1001	5	0	
+M	5	1001	7	0	
+M	6	1001	7	1	
+M	12	1001	7	7	
+M	13	1001	6	7	
+M	14	1001	5	7	
+M	15	1001	4	7	
+M	18	1001	4	4	
+M	19	1001	4	3	
+M	20	1001	4	2	
+E	1	5001	4	0	{"current":0}
+E	1	3002	7	7	{"denominator":-1}
+E	1	3001	0	7	{"denominator":-1}
+E	1	1002	4	5	{"passed":1}
+E	1	1001	4	2	{"passed":1}
+E	1	9008	4	1	{"value":0}
+E	2	9004	4	4	{"passed":1}
+E	2	9008	4	1	{"passed":1}
+E	3	5001	4	0	{"passed":1}
+E	6	2002	7	0	{"available":0}
+E	6	2002	7	0	{"picked":1}
+E	6	2002	7	0	{"passed":1}
+E	6	1001	7	0	{"payload":[2002]}
+E	13	3002	7	7	{"delivered":1}
+E	13	3002	7	7	{"passed":1}
+E	13	2002	7	0	{"available":1}
+E	13	1001	7	7	{"payload":[]}
+E	13	1001	7	7	{"delivered":1}
+D	13	1001	7	7	{"missed_items":[],"delivered_items":[2002],"delivered_to":3002}
+E	14	9007	5	7	{"value":0}
+E	15	9007	5	7	{"passed":1}
+E	18	4001	4	7	{"passed":1}
+E	18	5001	4	0	{"current":1}
+E	18	1002	4	5	{"passed":2}
+E	19	9004	4	4	{"passed":2}
+E	20	0	0	0	{"final_condition":1}
+
+PLAYER
+

@@ -1,0 +1,124 @@
+filename	C:\Users\Administrator\AppData\LocalLow\DefaultCompany\ParallelProg\play_out_5284438330660766510.txt
+timestamp	20171005104911
+
+METADATA
+level_id	10
+level_title	Intro to Parallel
+goal_string	Each Arrow Delivers Twice
+goal_struct	{"desired":[],"required":[{"condition":"gt","thread_id":0,"property":"delivered","id":1001,"type":"thread","value":1},{"condition":"gt","thread_id":0,"property":"delivered","id":1002,"type":"thread","value":1},{"condition":"gt","thread_id":0,"property":"delivered","id":3001,"type":"delivery","value":3}]}
+player_palette	{"painter":{"count":0},"semaphore":{"count":-1},"signal":{"count":-1},"colors":{"count":1}}
+time_pickup_min	0
+time_delivery_min	1
+time_exchange_min	0
+time_pickup_max	0
+time_delivery_max	3
+time_exchange_max	0
+board_width	17
+board_height	9
+
+LAYOUT
+FEEEGEEEEEEEGEEEC
+J---J-------J---J
+J---J-------J---J
+J---J-------J---J
+LEEEOEEEEEEEOEEEI
+----J-------J----
+----J-------J----
+----J-------J----
+----LEEEEEEEI----
+
+COLORS
+!!!!)))))))))!!!!
+!---(-------(---!
+!---(-------(---!
+!---(-------(---!
+!!!!)!!!!!!!)!!!!
+----(-------(----
+----(-------(----
+----(-------(----
+----(((((((((----
+
+DIRECTIONS
+V<<<X<<<<<<<<<<<<
+V   V       A   A
+V   V       A   A
+V   V       A   A
+>>>>X>>>>>>>X>>>A
+    V       A    
+    V       A    
+    V       A    
+    >>>>>>>>A    
+
+COMPONENTS
+9008	signal	14	4	P	E	{"color":0,"link":5001,"passed":0}
+5001	conditional	12	4	S	L	{"current":1,"color":0,"directions":["North","East"],"passed":0}
+3001	delivery	8	0	S	L	{"accepted_types":["Conditional"],"color":0,"missed":0,"delivered":0,"passed":0,"accepted_colors":[],"strict":0,"consumer":-1,"denominator":4}
+2002	pickup	8	8	S	L	{"color":1,"picked":0,"passed":0,"type":"Conditional"}
+2001	pickup	8	4	S	L	{"color":1,"picked":0,"passed":0,"type":"Conditional"}
+1002	thread	5	8	S	L	{"time_pickup_min":-1,"color":4,"initial_direction":"East","missed":0,"time_delivery_max":-1,"delivered":0,"time_exchange_max":-1,"capacity":-1,"time_pickup_max":-1,"delay":0,"picked":0,"time_delivery_min":-1,"passed":0,"time_exchange_min":-1,"direction":"East"}
+1001	thread	0	2	S	L	{"time_pickup_min":-1,"color":1,"initial_direction":"South","missed":0,"time_delivery_max":-1,"delivered":0,"time_exchange_max":-1,"capacity":-1,"time_pickup_max":-1,"delay":0,"picked":0,"time_delivery_min":-1,"passed":0,"time_exchange_min":-1,"direction":"South"}
+
+EXECUTION
+M	0	1001	0	2	
+M	0	1002	5	8	
+M	1	1002	6	8	
+M	2	1001	0	3	
+M	3	1002	8	8	
+M	4	1002	9	8	
+M	5	1001	0	4	
+M	7	1002	12	8	
+M	9	1001	4	4	
+M	11	1002	12	4	
+M	13	1001	8	4	
+M	14	1001	9	4	
+M	14	1002	13	4	
+M	17	1001	12	4	
+M	18	1001	13	4	
+M	19	1001	14	4	
+M	20	1001	15	4	
+M	21	1001	16	4	
+M	25	1001	16	0	
+M	29	1001	12	0	
+M	33	1001	8	0	
+M	34	1001	7	0	
+M	37	1001	4	0	
+M	41	1001	0	0	
+M	43	1001	0	2	
+M	44	1001	0	3	
+M	45	1001	0	4	
+M	49	1001	4	4	
+M	53	1001	8	4	
+M	54	1001	9	4	
+M	57	1001	12	4	
+M	58	1001	12	3	
+E	1	3001	8	0	{"denominator":-1}
+E	1	1002	5	8	{"passed":1}
+E	3	1001	0	2	{"passed":1}
+E	4	2002	8	8	{"available":0}
+E	4	2002	8	8	{"picked":1}
+E	4	2002	8	8	{"passed":1}
+E	4	1002	8	8	{"payload":[2002]}
+E	14	5001	12	4	{"passed":1}
+E	14	2001	8	4	{"available":0}
+E	14	2001	8	4	{"picked":1}
+E	14	2001	8	4	{"passed":1}
+E	14	1001	8	4	{"payload":[2001]}
+E	18	5001	12	4	{"passed":2}
+E	19	5001	12	4	{"current":0}
+E	20	9008	14	4	{"passed":1}
+E	34	3001	8	0	{"delivered":1}
+E	34	3001	8	0	{"passed":1}
+E	34	2001	8	4	{"available":1}
+E	34	1001	8	0	{"payload":[]}
+E	34	1001	8	0	{"delivered":1}
+D	34	1001	8	0	{"missed_items":[],"delivered_items":[2001],"delivered_to":3001}
+E	44	1001	0	2	{"passed":2}
+E	54	2001	8	4	{"available":0}
+E	54	2001	8	4	{"picked":2}
+E	54	2001	8	4	{"passed":2}
+E	54	1001	8	4	{"payload":[2001]}
+E	58	5001	12	4	{"passed":3}
+E	58	0	0	0	{"final_condition":513,"goal_descriptions":["e14 An arrow did not deliver all the packages it was supposed.","e14 An arrow did not deliver all the packages it was supposed.","e24 A delivery point did not get all the packages it was supposed."],"goal_state":[false,false,false]}
+
+PLAYER
+

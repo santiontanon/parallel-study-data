@@ -1,0 +1,191 @@
+filename	C:\Users\Owner1\AppData\LocalLow\DefaultCompany\ParallelProg\me_out_4444588394187169044.txt
+timestamp	20170907095230
+
+METADATA
+level_id	1
+level_title	PCG Level
+goal_string	Deliver all packages indicated in each delivery point.
+goal_struct	{"desired":[],"required":[{"condition":"gt","thread_id":0,"property":"delivered","id":2015,"type":"delivery","value":0},{"condition":"gt","thread_id":0,"property":"delivered","id":2019,"type":"delivery","value":0}]}
+player_palette	{"painter":{"count":0},"semaphore":{"count":0},"signal":{"count":0},"colors":{"count":1}}
+time_pickup_min	0
+time_delivery_min	3
+time_exchange_min	1
+time_pickup_max	0
+time_delivery_max	3
+time_exchange_max	1
+board_width	13
+board_height	5
+
+LAYOUT
+FEEEEEEEEEGEC
+J---------J-J
+J---FEEEEEI-J
+J---J-------J
+LEEEMEEEEEEEI
+
+COLORS
+             
+ --------- - 
+ ---       - 
+ --- ------- 
+             
+
+DIRECTIONS
+>>>>>>>>>>V<<
+A         V A
+A   V<<<<<< A
+A   V       A
+A<<<X>>>>>>>A
+
+COMPONENTS
+2019	delivery	0	0	S	L	{"accepted_types":[],"color":1,"missed":0,"delivered":0,"passed":0,"accepted_colors":[],"strict":0,"consumer":-1,"denominator":1}
+2015	delivery	12	0	S	L	{"accepted_types":[],"color":1,"missed":0,"delivered":0,"passed":0,"accepted_colors":[],"strict":0,"consumer":-1,"denominator":1}
+2018	pickup	2	4	S	L	{"color":1,"picked":0,"passed":0,"type":"Conditional"}
+2016	pickup	6	4	S	L	{"color":1,"picked":0,"passed":0,"type":"Conditional"}
+1013	conditional	4	4	S	L	{"current":0,"color":0,"directions":["West","East"],"passed":0}
+1	thread	8	2	S	L	{"time_pickup_min":-1,"color":1,"initial_direction":"West","missed":0,"time_delivery_max":-1,"delivered":0,"time_exchange_max":-1,"capacity":1,"time_pickup_max":-1,"delay":0,"picked":0,"time_delivery_min":-1,"passed":0,"time_exchange_min":-1,"direction":"West"}
+
+EXECUTION
+S	154	1	0	0	{"speed":0.0}
+M	0	1	8	2	
+M	1	1	7	2	
+M	4	1	4	2	
+M	6	1	4	4	
+M	7	1	3	4	
+M	8	1	2	4	
+M	9	1	1	4	
+M	10	1	0	4	
+M	14	1	0	0	
+M	15	1	1	0	
+M	24	1	10	0	
+M	26	1	10	2	
+M	28	1	8	2	
+M	29	1	7	2	
+M	32	1	4	2	
+M	34	1	4	4	
+M	35	1	3	4	
+M	36	1	2	4	
+M	37	1	1	4	
+M	38	1	0	4	
+M	42	1	0	0	
+M	43	1	1	0	
+M	52	1	10	0	
+M	54	1	10	2	
+M	56	1	8	2	
+M	57	1	7	2	
+M	60	1	4	2	
+M	62	1	4	4	
+M	63	1	3	4	
+M	64	1	2	4	
+M	65	1	1	4	
+M	66	1	0	4	
+M	70	1	0	0	
+M	71	1	1	0	
+M	80	1	10	0	
+M	82	1	10	2	
+M	84	1	8	2	
+M	85	1	7	2	
+M	88	1	4	2	
+M	90	1	4	4	
+M	91	1	3	4	
+M	92	1	2	4	
+M	93	1	1	4	
+M	94	1	0	4	
+M	98	1	0	0	
+M	99	1	1	0	
+M	108	1	10	0	
+M	110	1	10	2	
+M	112	1	8	2	
+M	113	1	7	2	
+M	116	1	4	2	
+M	118	1	4	4	
+M	119	1	3	4	
+M	120	1	2	4	
+M	121	1	1	4	
+M	122	1	0	4	
+M	126	1	0	0	
+M	127	1	1	0	
+M	136	1	10	0	
+M	138	1	10	2	
+M	140	1	8	2	
+M	141	1	7	2	
+M	144	1	4	2	
+M	146	1	4	4	
+M	147	1	3	4	
+M	148	1	2	4	
+M	149	1	1	4	
+M	150	1	0	4	
+M	154	1	0	0	
+E	1	2019	0	0	{"denominator":-1}
+E	1	2015	12	0	{"denominator":-1}
+E	1	1	8	2	{"passed":1}
+E	7	1013	4	4	{"passed":1}
+E	9	2018	2	4	{"available":0}
+E	9	2018	2	4	{"picked":1}
+E	9	2018	2	4	{"passed":1}
+E	9	1	2	4	{"payload":[2018]}
+E	15	2019	0	0	{"delivered":1}
+E	15	2019	0	0	{"passed":1}
+E	15	2018	2	4	{"available":1}
+E	15	1	0	0	{"payload":[]}
+E	15	1	0	0	{"delivered":1}
+D	15	1	0	0	{"missed_items":[],"delivered_items":[2018],"delivered_to":2019}
+E	15	0	0	0	{"goals_completed":1}
+E	29	1	8	2	{"passed":2}
+E	35	1013	4	4	{"passed":2}
+E	37	2018	2	4	{"available":0}
+E	37	2018	2	4	{"picked":2}
+E	37	2018	2	4	{"passed":2}
+E	37	1	2	4	{"payload":[2018]}
+E	43	2019	0	0	{"delivered":2}
+E	43	2019	0	0	{"passed":2}
+E	43	2018	2	4	{"available":1}
+E	43	1	0	0	{"payload":[]}
+E	43	1	0	0	{"delivered":2}
+D	43	1	0	0	{"missed_items":[],"delivered_items":[2018],"delivered_to":2019}
+E	57	1	8	2	{"passed":3}
+E	63	1013	4	4	{"passed":3}
+E	65	2018	2	4	{"available":0}
+E	65	2018	2	4	{"picked":3}
+E	65	2018	2	4	{"passed":3}
+E	65	1	2	4	{"payload":[2018]}
+E	71	2019	0	0	{"delivered":3}
+E	71	2019	0	0	{"passed":3}
+E	71	2018	2	4	{"available":1}
+E	71	1	0	0	{"payload":[]}
+E	71	1	0	0	{"delivered":3}
+D	71	1	0	0	{"missed_items":[],"delivered_items":[2018],"delivered_to":2019}
+E	85	1	8	2	{"passed":4}
+E	91	1013	4	4	{"passed":4}
+E	93	2018	2	4	{"available":0}
+E	93	2018	2	4	{"picked":4}
+E	93	2018	2	4	{"passed":4}
+E	93	1	2	4	{"payload":[2018]}
+E	99	2019	0	0	{"delivered":4}
+E	99	2019	0	0	{"passed":4}
+E	99	2018	2	4	{"available":1}
+E	99	1	0	0	{"payload":[]}
+E	99	1	0	0	{"delivered":4}
+D	99	1	0	0	{"missed_items":[],"delivered_items":[2018],"delivered_to":2019}
+E	113	1	8	2	{"passed":5}
+E	119	1013	4	4	{"passed":5}
+E	121	2018	2	4	{"available":0}
+E	121	2018	2	4	{"picked":5}
+E	121	2018	2	4	{"passed":5}
+E	121	1	2	4	{"payload":[2018]}
+E	127	2019	0	0	{"delivered":5}
+E	127	2019	0	0	{"passed":5}
+E	127	2018	2	4	{"available":1}
+E	127	1	0	0	{"payload":[]}
+E	127	1	0	0	{"delivered":5}
+D	127	1	0	0	{"missed_items":[],"delivered_items":[2018],"delivered_to":2019}
+E	141	1	8	2	{"passed":6}
+E	147	1013	4	4	{"passed":6}
+E	149	2018	2	4	{"available":0}
+E	149	2018	2	4	{"picked":6}
+E	149	2018	2	4	{"passed":6}
+E	149	1	2	4	{"payload":[2018]}
+E	154	0	0	0	{"final_condition":0}
+
+PLAYER
+

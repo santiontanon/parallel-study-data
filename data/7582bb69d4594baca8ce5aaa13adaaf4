@@ -1,0 +1,215 @@
+filename	/Users/adamwolf/Library/Application Support/unity.DefaultCompany.ParallelProg/me_out_7260307750047011781.txt
+timestamp	20171004145704
+
+METADATA
+level_id	28
+level_title	Optional Level 10
+goal_string	Deliver all packages indicated in each delivery point.
+goal_struct	{"desired":[],"required":[{"condition":"gt","thread_id":0,"property":"delivered","id":2046,"type":"delivery","value":2},{"condition":"gt","thread_id":0,"property":"delivered","id":2038,"type":"delivery","value":2}]}
+player_palette	{"painter":{"count":0},"semaphore":{"count":0},"signal":{"count":0},"colors":{"count":1}}
+time_pickup_min	0
+time_delivery_min	3
+time_exchange_min	1
+time_pickup_max	0
+time_delivery_max	3
+time_exchange_max	1
+board_width	31
+board_height	9
+
+LAYOUT
+FEEEEEEEEEEEEEEEEEEEEEEEEEEEEEC
+J-----------------------------J
+J---------------FEEEEEEEGEEEGEK
+J---------------J-------J---J-J
+J-------FEEEEEEEMEEEEEEEI---J-J
+J-------J-------------------J-J
+J-------NEEEEEEEEEEEEEEEEEEEI-J
+J-------J---------------------J
+LEEEEEEEMEEEEEEEEEEEEEEEEEEEEEI
+
+COLORS
+                               
+ ----------------------------- 
+ ---------------               
+ --------------- ------- --- - 
+ -------                 --- - 
+ ------- ------------------- - 
+ -------                     - 
+ ------- --------------------- 
+                               
+
+DIRECTIONS
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>V
+A                             V
+A               V<<<<<<<X<<<X<X
+A               V       V   V V
+A       XXXXXXXXX<<<<<<<<   V V
+A       X                   V V
+A       X<<<<<<<<<<<<<<<<<<<< V
+A       V                     V
+A<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+COMPONENTS
+9086	signal	22	2	P	E	{"color":0,"link":1042,"passed":0}
+9085	signal	24	4	P	E	{"color":0,"link":1042,"passed":0}
+9076	signal	5	8	P	E	{"color":0,"link":9070,"passed":0}
+9075	signal	1	8	P	E	{"color":0,"link":9071,"passed":0}
+9071	semaphore	0	7	P	E	{"stopped":0,"color":0,"passed":0,"value":0}
+9070	semaphore	3	8	P	E	{"stopped":0,"color":0,"passed":0,"value":0}
+9060	signal	23	2	P	E	{"color":0,"link":1023,"passed":0}
+9059	signal	24	3	P	E	{"color":0,"link":1023,"passed":0}
+9056	signal	23	4	P	E	{"color":0,"link":1044,"passed":0}
+9055	signal	21	2	P	E	{"color":0,"link":1044,"passed":0}
+28	thread	2	8	S	L	{"time_pickup_min":-1,"color":1,"initial_direction":"West","missed":0,"time_delivery_max":-1,"delivered":0,"time_exchange_max":-1,"capacity":1,"time_pickup_max":-1,"delay":0,"picked":0,"time_delivery_min":-1,"passed":0,"time_exchange_min":-1,"direction":"West"}
+27	thread	0	8	S	L	{"time_pickup_min":-1,"color":1,"initial_direction":"North","missed":0,"time_delivery_max":-1,"delivered":0,"time_exchange_max":-1,"capacity":1,"time_pickup_max":-1,"delay":0,"picked":0,"time_delivery_min":-1,"passed":0,"time_exchange_min":-1,"direction":"North"}
+26	thread	0	0	S	L	{"time_pickup_min":-1,"color":1,"initial_direction":"East","missed":0,"time_delivery_max":-1,"delivered":0,"time_exchange_max":-1,"capacity":1,"time_pickup_max":-1,"delay":0,"picked":0,"time_delivery_min":-1,"passed":0,"time_exchange_min":-1,"direction":"East"}
+1031	semaphore	18	4	S	L	{"stopped":0,"color":0,"passed":0,"value":0}
+1035	semaphore	18	2	S	L	{"stopped":0,"color":0,"passed":0,"value":0}
+1033	signal	20	4	S	L	{"color":0,"link":1035,"passed":0}
+1029	signal	20	2	S	L	{"color":0,"link":1031,"passed":0}
+1023	conditional	24	2	S	L	{"current":0,"color":0,"directions":["South","West"],"passed":0}
+2038	delivery	14	6	S	L	{"accepted_types":[],"color":1,"missed":0,"delivered":0,"passed":0,"accepted_colors":[],"strict":0,"consumer":-1,"denominator":3}
+2047	pickup	16	6	S	L	{"color":2,"picked":0,"passed":0,"type":"Unconditional"}
+2046	delivery	14	8	S	L	{"accepted_types":[],"color":1,"missed":0,"delivered":0,"passed":0,"accepted_colors":[],"strict":0,"consumer":-1,"denominator":3}
+2039	pickup	16	8	S	L	{"color":1,"picked":0,"passed":0,"type":"Unconditional"}
+1044	conditional	28	2	S	L	{"current":0,"color":0,"directions":["West","South"],"passed":0}
+1042	conditional	30	2	S	L	{"current":0,"color":0,"directions":["West","South"],"passed":0}
+1	thread	4	8	S	L	{"time_pickup_min":-1,"color":1,"initial_direction":"West","missed":0,"time_delivery_max":-1,"delivered":0,"time_exchange_max":-1,"capacity":1,"time_pickup_max":-1,"delay":0,"picked":0,"time_delivery_min":-1,"passed":0,"time_exchange_min":-1,"direction":"West"}
+
+EXECUTION
+S	175	28	19	4	{"speed":0.0}
+M	0	28	2	8	
+M	0	27	0	8	
+M	0	26	0	0	
+M	0	1	4	8	
+M	1	28	1	8	
+M	1	26	1	0	
+M	2	28	0	8	
+M	2	27	0	7	
+M	30	26	30	0	
+M	32	26	30	2	
+M	33	27	0	6	
+M	33	26	29	2	
+M	39	27	0	0	
+M	69	27	30	0	
+M	71	27	30	2	
+M	34	26	28	2	
+M	72	27	29	2	
+M	72	26	27	2	
+M	73	27	28	2	
+M	75	26	24	2	
+M	76	27	27	2	
+M	76	26	24	3	
+M	79	27	24	2	
+M	77	26	24	4	
+M	80	27	23	2	
+M	80	26	23	4	
+M	81	27	22	2	
+M	81	26	22	4	
+M	82	27	21	2	
+M	83	26	20	4	
+M	84	27	20	2	
+M	84	26	19	4	
+M	85	27	19	2	
+M	85	26	18	4	
+M	86	27	18	2	
+M	86	26	17	4	
+M	87	27	17	2	
+M	87	26	16	4	
+M	95	26	8	4	
+M	97	26	8	6	
+M	99	26	8	8	
+M	102	26	5	8	
+M	103	27	16	2	
+M	105	27	16	4	
+M	113	27	8	4	
+M	115	27	8	6	
+M	117	27	8	8	
+M	120	27	5	8	
+M	103	26	4	8	
+M	103	1	3	8	
+M	121	27	4	8	
+M	121	1	2	8	
+M	122	1	1	8	
+M	123	28	0	7	
+M	123	1	0	8	
+M	124	28	0	6	
+M	130	28	0	0	
+M	160	28	30	0	
+M	162	28	30	2	
+M	163	28	29	2	
+M	164	28	28	2	
+M	165	28	27	2	
+M	168	28	24	2	
+M	169	28	24	3	
+M	170	28	24	4	
+M	171	28	23	4	
+M	172	28	22	4	
+M	174	28	20	4	
+M	175	28	19	4	
+E	1	9071	0	7	{"value":1}
+E	1	28	2	8	{"passed":1}
+E	1	26	0	0	{"passed":1}
+E	1	2038	14	6	{"denominator":-1}
+E	1	2046	14	8	{"denominator":-1}
+E	32	9075	1	8	{"passed":1}
+E	32	9071	0	7	{"value":0}
+E	32	27	0	8	{"passed":1}
+E	33	9071	0	7	{"passed":1}
+E	33	1042	30	2	{"passed":1}
+E	71	26	0	0	{"passed":2}
+E	72	1044	28	2	{"passed":1}
+E	72	1042	30	2	{"passed":2}
+E	76	1023	24	2	{"current":1}
+E	76	1023	24	2	{"passed":1}
+E	76	1044	28	2	{"passed":2}
+E	79	9059	24	3	{"passed":1}
+E	79	1042	30	2	{"current":1}
+E	80	9085	24	4	{"passed":1}
+E	80	1023	24	2	{"current":0}
+E	80	1023	24	2	{"passed":2}
+E	80	1044	28	2	{"current":1}
+E	81	9060	23	2	{"passed":1}
+E	81	9056	23	4	{"passed":1}
+E	81	1042	30	2	{"current":0}
+E	83	9086	22	2	{"passed":1}
+E	83	1035	18	2	{"value":1}
+E	83	1044	28	2	{"current":0}
+E	84	9055	21	2	{"passed":1}
+E	84	1031	18	4	{"value":1}
+E	84	1033	20	4	{"passed":1}
+E	85	1031	18	4	{"value":0}
+E	85	1029	20	2	{"passed":1}
+E	86	1031	18	4	{"passed":1}
+E	86	1035	18	2	{"value":0}
+E	102	9070	3	8	{"value":1}
+E	102	1035	18	2	{"passed":1}
+E	102	2	8	6	{"passed":1}
+E	120	9076	5	8	{"passed":1}
+E	120	9070	3	8	{"value":0}
+E	120	1	4	8	{"passed":1}
+E	120	2	8	6	{"passed":2}
+E	121	9076	5	8	{"passed":2}
+E	121	9070	3	8	{"passed":1}
+E	122	9071	0	7	{"value":1}
+E	122	28	2	8	{"passed":2}
+E	123	9075	1	8	{"passed":2}
+E	123	9071	0	7	{"value":0}
+E	123	27	0	8	{"passed":2}
+E	124	9071	0	7	{"passed":2}
+E	162	26	0	0	{"passed":3}
+E	163	1042	30	2	{"passed":3}
+E	165	1044	28	2	{"passed":3}
+E	169	1023	24	2	{"current":1}
+E	169	1023	24	2	{"passed":3}
+E	170	9059	24	3	{"passed":2}
+E	170	1042	30	2	{"current":1}
+E	171	9085	24	4	{"passed":2}
+E	171	1044	28	2	{"current":1}
+E	172	9056	23	4	{"passed":2}
+E	174	1035	18	2	{"value":1}
+E	175	1033	20	4	{"passed":2}
+E	175	0	0	0	{"final_condition":1}
+
+PLAYER
+

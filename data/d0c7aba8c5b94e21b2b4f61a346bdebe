@@ -1,0 +1,110 @@
+filename	C:\Users\Owner1\AppData\LocalLow\DefaultCompany\ParallelProg\me_out_724547133939501748.txt
+timestamp	20170906132631
+
+METADATA
+level_id	1
+level_title	PCG Level
+goal_string	Deliver all packages indicated in each delivery point.
+goal_struct	{"desired":[],"required":[{"condition":"gt","thread_id":0,"property":"delivered","id":2019,"type":"delivery","value":2}]}
+player_palette	{"painter":{"count":0},"semaphore":{"count":0},"signal":{"count":0},"colors":{"count":1}}
+time_pickup_min	0
+time_delivery_min	3
+time_exchange_min	1
+time_pickup_max	0
+time_delivery_max	3
+time_exchange_max	1
+board_width	11
+board_height	5
+
+LAYOUT
+FEEEEEEEEEC
+J---------J
+J-FEEEEEEEK
+J-J-------J
+LEMEEEEEEEI
+
+COLORS
+           
+ --------- 
+ -         
+ - ------- 
+           
+
+DIRECTIONS
+>>>>>>>>>>V
+A         V
+A V<<<<<<<<
+A V       A
+A<X>>>>>>>A
+
+COMPONENTS
+9003	signal	3	4	P	E	{"color":0,"link":1017,"passed":0}
+1	thread	6	2	S	L	{"time_pickup_min":-1,"color":1,"initial_direction":"West","missed":0,"time_delivery_max":-1,"delivered":0,"time_exchange_max":-1,"capacity":1,"time_pickup_max":-1,"delay":0,"picked":0,"time_delivery_min":-1,"passed":0,"time_exchange_min":-1,"direction":"West"}
+1017	conditional	2	4	S	L	{"current":0,"color":0,"directions":["East","West"],"passed":0}
+2020	pickup	0	2	S	L	{"color":1,"picked":0,"passed":0,"type":"Unconditional"}
+2019	delivery	8	0	S	L	{"accepted_types":[],"color":1,"missed":0,"delivered":0,"passed":0,"accepted_colors":[],"strict":0,"consumer":-1,"denominator":3}
+12	thread	4	2	S	L	{"time_pickup_min":-1,"color":1,"initial_direction":"West","missed":0,"time_delivery_max":-1,"delivered":0,"time_exchange_max":-1,"capacity":1,"time_pickup_max":-1,"delay":0,"picked":0,"time_delivery_min":-1,"passed":0,"time_exchange_min":-1,"direction":"West"}
+
+EXECUTION
+S	49	1	9	0	{"speed":0.0}
+S	49	12	9	0	{"speed":0.0}
+M	0	1	6	2	
+M	0	12	4	2	
+M	1	1	5	2	
+M	1	12	3	2	
+M	2	12	2	2	
+M	4	12	2	4	
+M	5	12	3	4	
+M	6	12	4	4	
+M	9	1	2	2	
+M	11	1	2	4	
+M	12	12	10	4	
+M	14	12	10	2	
+M	20	12	4	2	
+M	21	1	1	4	
+M	21	12	3	2	
+M	22	12	2	2	
+M	24	12	2	4	
+M	25	1	0	4	
+M	25	12	1	4	
+M	27	1	0	2	
+M	28	1	0	1	
+M	28	12	0	4	
+M	30	12	0	2	
+M	31	1	0	0	
+M	31	12	0	1	
+M	39	1	8	0	
+M	40	12	0	0	
+M	48	12	8	0	
+M	49	1	9	0	
+M	49	12	9	0	
+E	1	1	6	2	{"passed":1}
+E	1	2019	8	0	{"denominator":-1}
+E	1	12	4	2	{"passed":1}
+E	5	1017	2	4	{"current":1}
+E	5	1017	2	4	{"passed":1}
+E	6	9003	3	4	{"passed":1}
+E	20	1	6	2	{"passed":2}
+E	20	12	4	2	{"passed":2}
+E	21	1017	2	4	{"passed":2}
+E	21	12	4	2	{"passed":3}
+E	27	1017	2	4	{"passed":3}
+E	30	2020	0	2	{"picked":1}
+E	30	2020	0	2	{"passed":1}
+E	30	1	0	2	{"payload":[2020]}
+E	39	2020	0	2	{"picked":2}
+E	39	2020	0	2	{"passed":2}
+E	39	12	0	2	{"payload":[2020]}
+E	49	2019	8	0	{"delivered":1}
+E	49	2019	8	0	{"missed":1}
+E	49	2019	8	0	{"passed":2}
+E	49	1	8	0	{"payload":[]}
+E	49	1	8	0	{"missed":1}
+D	49	1	8	0	{"missed_items":[2020],"delivered_items":[],"delivered_to":2019}
+E	49	12	8	0	{"payload":[]}
+E	49	12	8	0	{"delivered":1}
+D	49	12	8	0	{"missed_items":[],"delivered_items":[2020],"delivered_to":2019}
+E	49	0	0	0	{"final_condition":20}
+
+PLAYER
+

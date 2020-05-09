@@ -1,0 +1,126 @@
+filename	/Users/nhannguyen/Library/Application Support/unity.DefaultCompany.ParallelProg/play_out_11228660091662493435.txt
+timestamp	20171006163659
+
+METADATA
+level_id	3
+level_title	Intro to Parallel
+goal_string	Deliver 2 packages
+goal_struct	{"desired":[{"condition":"eq","thread_id":0,"property":"delivered","id":3001,"type":"delivery","value":2}],"required":[{"condition":"eq","thread_id":0,"property":"delivered","id":3001,"type":"delivery","value":2}]}
+player_palette	{"painter":{"count":0},"semaphore":{"count":-1},"signal":{"count":-1},"colors":{"count":1}}
+time_pickup_min	0
+time_delivery_min	1
+time_exchange_min	0
+time_pickup_max	0
+time_delivery_max	3
+time_exchange_max	0
+board_width	8
+board_height	8
+
+LAYOUT
+FEEEEEEC
+J------J
+J------J
+J------J
+J------J
+J------J
+J------J
+LEEEEEEI
+
+COLORS
+!!!!!!!!
+!------!
+!------!
+!------!
+!------!
+!------!
+!------!
+!!!!!!!!
+
+DIRECTIONS
+>>>>>>>V
+A      V
+A      V
+A      V
+A      V
+A      V
+A      V
+A<<<<<<<
+
+COMPONENTS
+9004	signal	7	2	P	E	{"color":0,"link":4002,"passed":0}
+9003	signal	0	1	P	E	{"color":0,"link":4001,"passed":0}
+1001	thread	7	5	S	L	{"time_pickup_min":-1,"color":1,"initial_direction":"South","missed":0,"time_delivery_max":-1,"delivered":0,"time_exchange_max":-1,"capacity":-1,"time_pickup_max":-1,"delay":0,"picked":0,"time_delivery_min":-1,"passed":0,"time_exchange_min":-1,"direction":"South"}
+2001	pickup	0	3	S	L	{"color":1,"picked":0,"passed":0,"type":"Conditional"}
+3001	delivery	7	3	S	L	{"accepted_types":["Conditional"],"color":0,"missed":0,"delivered":0,"passed":0,"accepted_colors":[],"strict":0,"consumer":-1,"denominator":2}
+4001	semaphore	4	0	S	L	{"stopped":0,"color":0,"passed":0,"value":0}
+4002	semaphore	4	7	S	L	{"stopped":0,"color":0,"passed":0,"value":1}
+
+EXECUTION
+M	0	1001	7	5	
+M	1	1001	7	6	
+M	2	1001	7	7	
+M	5	1001	4	7	
+M	6	1001	3	7	
+M	9	1001	0	7	
+M	13	1001	0	3	
+M	14	1001	0	2	
+M	15	1001	0	1	
+M	16	1001	0	0	
+M	20	1001	4	0	
+M	21	1001	5	0	
+M	23	1001	7	0	
+M	25	1001	7	2	
+M	26	1001	7	3	
+M	27	1001	7	4	
+M	28	1001	7	5	
+M	29	1001	7	6	
+M	30	1001	7	7	
+M	33	1001	4	7	
+M	34	1001	3	7	
+M	37	1001	0	7	
+M	41	1001	0	3	
+M	42	1001	0	2	
+M	43	1001	0	1	
+M	44	1001	0	0	
+M	48	1001	4	0	
+M	49	1001	5	0	
+M	51	1001	7	0	
+M	53	1001	7	2	
+M	54	1001	7	3	
+E	1	1001	7	5	{"passed":1}
+E	1	3001	7	3	{"denominator":-1}
+E	5	4002	4	7	{"value":0}
+E	6	4002	4	7	{"passed":1}
+E	14	2001	0	3	{"available":0}
+E	14	2001	0	3	{"picked":1}
+E	14	2001	0	3	{"passed":1}
+E	14	1001	0	3	{"payload":[2001]}
+E	15	4001	4	0	{"value":1}
+E	16	9003	0	1	{"passed":1}
+E	20	4001	4	0	{"value":0}
+E	21	4001	4	0	{"passed":1}
+E	25	4002	4	7	{"value":1}
+E	26	9004	7	2	{"passed":1}
+E	27	2001	0	3	{"available":1}
+E	27	3001	7	3	{"delivered":1}
+E	27	3001	7	3	{"passed":1}
+E	27	1001	7	3	{"payload":[]}
+E	27	1001	7	3	{"delivered":1}
+D	27	1001	7	3	{"missed_items":[],"delivered_items":[2001],"delivered_to":3001}
+E	29	1001	7	5	{"passed":2}
+E	33	4002	4	7	{"value":0}
+E	34	4002	4	7	{"passed":2}
+E	42	2001	0	3	{"available":0}
+E	42	2001	0	3	{"picked":2}
+E	42	2001	0	3	{"passed":2}
+E	42	1001	0	3	{"payload":[2001]}
+E	43	4001	4	0	{"value":1}
+E	44	9003	0	1	{"passed":2}
+E	48	4001	4	0	{"value":0}
+E	49	4001	4	0	{"passed":2}
+E	53	4002	4	7	{"value":1}
+E	54	9004	7	2	{"passed":2}
+E	54	0	0	0	{"final_condition":0,"goal_descriptions":["e22 A delivery point didn\u0027t get the exact number of packages."],"goal_state":[false,false]}
+
+PLAYER
+

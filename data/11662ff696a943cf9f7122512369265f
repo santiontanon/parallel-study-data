@@ -1,0 +1,143 @@
+filename	/Users/jv384/Library/Application Support/unity.DefaultCompany.ParallelProg/play_out_1724296620012568702.txt
+timestamp	20170725143253
+
+METADATA
+level_id	4
+level_title	Mutual Exclusion
+goal_string	Each arrow delivers the package twice
+goal_struct	{"desired":[],"required":[{"condition":"eq","thread_id":1001,"property":"delivered","id":3001,"type":"delivery","value":2},{"condition":"eq","thread_id":1002,"property":"delivered","id":3001,"type":"delivery","value":2}]}
+player_palette	{"painter":{"count":0},"semaphore":{"count":-1},"signal":{"count":-1},"colors":{"count":2}}
+time_pickup_min	0
+time_delivery_min	1
+time_exchange_min	0
+time_pickup_max	0
+time_delivery_max	3
+time_exchange_max	0
+board_width	8
+board_height	8
+
+LAYOUT
+FEEGEEEC
+J--J---J
+J--J---J
+J--J---J
+J--J---J
+J--J---J
+J--J---J
+LEEMEEEI
+
+COLORS
+!!!#""""
+!--#---"
+!--#---"
+!--#---"
+!--#---"
+!--#---"
+!--#---"
+!!!#""""
+
+DIRECTIONS
+>>>V<<<<
+A  V   A
+A  V   A
+A  V   A
+A  V   A
+A  V   A
+A  V   A
+A<<X>>>A
+
+COMPONENTS
+4002	intersection	3	7	S	L	{"color":0,"directions":["West","West","East","West","East","East"],"passed":0}
+4001	intersection	3	0	S	L	{"color":0,"directions":["South","South","South","South","South","South"],"passed":0}
+3001	delivery	3	6	S	L	{"accepted_types":["Unconditional"],"color":0,"missed":0,"delivered":0,"passed":0,"accepted_colors":[],"strict":0,"consumer":-1,"denominator":4}
+2001	pickup	3	1	S	L	{"color":1,"picked":0,"passed":0,"type":"Unconditional"}
+1002	thread	7	0	S	L	{"time_pickup_min":-1,"color":2,"initial_direction":"West","missed":0,"time_delivery_max":-1,"delivered":0,"time_exchange_max":-1,"capacity":-1,"time_pickup_max":-1,"delay":0,"picked":0,"time_delivery_min":-1,"passed":0,"time_exchange_min":-1,"direction":"West"}
+1001	thread	0	0	S	L	{"time_pickup_min":-1,"color":1,"initial_direction":"East","missed":0,"time_delivery_max":-1,"delivered":0,"time_exchange_max":-1,"capacity":-1,"time_pickup_max":-1,"delay":0,"picked":0,"time_delivery_min":-1,"passed":0,"time_exchange_min":-1,"direction":"East"}
+
+EXECUTION
+S	65	1002	6	0	{"speed":0.0}
+S	65	1001	3	7	{"speed":0.0}
+M	0	1002	7	0	
+M	0	1001	0	0	
+M	1	1002	6	0	
+M	1	1001	1	0	
+M	4	1002	3	0	
+M	5	1002	3	1	
+M	6	1002	3	2	
+M	7	1001	3	0	
+M	8	1001	3	1	
+M	12	1002	3	6	
+M	13	1002	3	7	
+M	14	1001	3	2	
+M	18	1002	7	7	
+M	25	1002	7	0	
+M	26	1002	6	0	
+M	29	1001	3	6	
+M	30	1001	3	7	
+M	33	1002	3	0	
+M	34	1002	3	1	
+M	33	1001	0	7	
+M	40	1001	0	0	
+M	41	1002	3	2	
+M	42	1001	1	0	
+M	46	1002	3	6	
+M	47	1002	3	7	
+M	48	1001	3	0	
+M	49	1001	3	1	
+M	53	1002	7	7	
+M	60	1002	7	0	
+M	50	1001	3	2	
+M	64	1001	3	6	
+M	65	1002	6	0	
+M	65	1001	3	7	
+E	1	3001	3	6	{"denominator":-1}
+E	1	1002	7	0	{"passed":1}
+E	1	1001	0	0	{"passed":1}
+E	5	4001	3	0	{"passed":1}
+E	8	4001	3	0	{"passed":2}
+E	8	2001	3	1	{"picked":1}
+E	8	2001	3	1	{"passed":1}
+E	8	1002	3	1	{"payload":[2001]}
+E	13	3001	3	6	{"delivered":1}
+E	13	3001	3	6	{"passed":1}
+E	13	1002	3	6	{"payload":[]}
+E	13	1002	3	6	{"delivered":1}
+D	13	1002	3	6	{"missed_items":[],"delivered_items":[2001],"delivered_to":3001}
+E	14	2001	3	1	{"picked":2}
+E	14	2001	3	1	{"passed":2}
+E	14	1001	3	1	{"payload":[2001]}
+E	25	4002	3	7	{"passed":1}
+E	29	1002	7	0	{"passed":2}
+E	30	3001	3	6	{"delivered":2}
+E	30	3001	3	6	{"passed":2}
+E	30	1001	3	6	{"payload":[]}
+E	30	1001	3	6	{"delivered":1}
+D	30	1001	3	6	{"missed_items":[],"delivered_items":[2001],"delivered_to":3001}
+E	40	4002	3	7	{"passed":2}
+E	40	4001	3	0	{"passed":3}
+E	41	2001	3	1	{"picked":3}
+E	41	2001	3	1	{"passed":3}
+E	41	1002	3	1	{"payload":[2001]}
+E	42	1001	0	0	{"passed":2}
+E	49	4001	3	0	{"passed":4}
+E	49	3001	3	6	{"delivered":3}
+E	49	3001	3	6	{"passed":3}
+E	49	1002	3	6	{"payload":[]}
+E	49	1002	3	6	{"delivered":2}
+D	49	1002	3	6	{"missed_items":[],"delivered_items":[2001],"delivered_to":3001}
+E	49	0	0	0	{"goals_completed":1}
+E	60	4002	3	7	{"passed":3}
+E	60	2001	3	1	{"picked":4}
+E	60	2001	3	1	{"passed":4}
+E	60	1001	3	1	{"payload":[2001]}
+E	65	3001	3	6	{"delivered":4}
+E	65	3001	3	6	{"passed":4}
+E	65	1002	7	0	{"passed":3}
+E	65	1001	3	6	{"payload":[]}
+E	65	1001	3	6	{"delivered":2}
+D	65	1001	3	6	{"missed_items":[],"delivered_items":[2001],"delivered_to":3001}
+E	65	0	0	0	{"goals_completed":2}
+E	65	0	0	0	{"final_condition":10}
+
+PLAYER
+

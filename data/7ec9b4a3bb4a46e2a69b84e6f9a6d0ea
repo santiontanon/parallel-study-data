@@ -1,0 +1,161 @@
+filename	C:\Users\Owner1\AppData\LocalLow\DefaultCompany\ParallelProg\me_out_4796435261299440827.txt
+timestamp	20170906132652
+
+METADATA
+level_id	1
+level_title	PCG Level
+goal_string	Deliver all packages indicated in each delivery point.
+goal_struct	{"desired":[],"required":[{"condition":"gt","thread_id":0,"property":"delivered","id":2019,"type":"delivery","value":2}]}
+player_palette	{"painter":{"count":0},"semaphore":{"count":0},"signal":{"count":0},"colors":{"count":1}}
+time_pickup_min	0
+time_delivery_min	3
+time_exchange_min	1
+time_pickup_max	0
+time_delivery_max	3
+time_exchange_max	1
+board_width	11
+board_height	5
+
+LAYOUT
+FEEEEEEEEEC
+J---------J
+J-FEEEEEEEK
+J-J-------J
+LEMEEEEEEEI
+
+COLORS
+           
+ --------- 
+ -         
+ - ------- 
+           
+
+DIRECTIONS
+>>>>>>>>>>V
+A         V
+A V<<<<<<<<
+A V       A
+A<X>>>>>>>A
+
+COMPONENTS
+9005	signal	9	0	P	E	{"color":0,"link":9004,"passed":0}
+9004	semaphore	7	0	P	E	{"stopped":0,"color":0,"passed":0,"value":1}
+12	thread	4	2	S	L	{"time_pickup_min":-1,"color":1,"initial_direction":"West","missed":0,"time_delivery_max":-1,"delivered":0,"time_exchange_max":-1,"capacity":1,"time_pickup_max":-1,"delay":0,"picked":0,"time_delivery_min":-1,"passed":0,"time_exchange_min":-1,"direction":"West"}
+2019	delivery	8	0	S	L	{"accepted_types":[],"color":1,"missed":0,"delivered":0,"passed":0,"accepted_colors":[],"strict":0,"consumer":-1,"denominator":3}
+2020	pickup	0	2	S	L	{"color":1,"picked":0,"passed":0,"type":"Unconditional"}
+1017	conditional	2	4	S	L	{"current":0,"color":0,"directions":["East","West"],"passed":0}
+1	thread	6	2	S	L	{"time_pickup_min":-1,"color":1,"initial_direction":"West","missed":0,"time_delivery_max":-1,"delivered":0,"time_exchange_max":-1,"capacity":1,"time_pickup_max":-1,"delay":0,"picked":0,"time_delivery_min":-1,"passed":0,"time_exchange_min":-1,"direction":"West"}
+9003	signal	3	4	P	E	{"color":0,"link":1017,"passed":0}
+
+EXECUTION
+S	82	12	1	4	{"speed":0.0}
+S	82	1	9	0	{"speed":0.0}
+M	0	1	6	2	
+M	0	12	4	2	
+M	1	1	5	2	
+M	1	12	3	2	
+M	2	12	2	2	
+M	4	1	2	2	
+M	4	12	2	4	
+M	6	1	2	4	
+M	7	1	1	4	
+M	7	12	3	4	
+M	8	1	0	4	
+M	8	12	4	4	
+M	10	1	0	2	
+M	11	1	0	1	
+M	16	12	10	4	
+M	18	12	10	2	
+M	24	12	4	2	
+M	25	1	0	0	
+M	25	12	3	2	
+M	32	1	7	0	
+M	33	1	8	0	
+M	33	12	2	2	
+M	35	12	2	4	
+M	36	1	9	0	
+M	36	12	1	4	
+M	37	1	10	0	
+M	37	12	0	4	
+M	39	12	0	2	
+M	40	12	0	1	
+M	41	1	10	2	
+M	45	1	6	2	
+M	46	1	5	2	
+M	46	12	0	0	
+M	53	12	7	0	
+M	54	12	8	0	
+M	56	1	2	2	
+M	58	1	2	4	
+M	59	1	1	4	
+M	59	12	9	0	
+M	60	1	0	4	
+M	60	12	10	0	
+M	62	1	0	2	
+M	63	1	0	1	
+M	64	12	10	2	
+M	70	12	4	2	
+M	71	1	0	0	
+M	71	12	3	2	
+M	78	1	7	0	
+M	79	1	8	0	
+M	79	12	2	2	
+M	81	12	2	4	
+M	82	1	9	0	
+M	82	12	1	4	
+E	1	12	4	2	{"passed":1}
+E	1	2019	8	0	{"denominator":-1}
+E	1	1	6	2	{"passed":1}
+E	6	12	4	2	{"passed":2}
+E	7	1017	2	4	{"current":1}
+E	7	1017	2	4	{"passed":2}
+E	10	9003	3	4	{"passed":1}
+E	24	2020	0	2	{"picked":1}
+E	24	2020	0	2	{"passed":1}
+E	24	1	6	2	{"passed":2}
+E	24	1	0	2	{"payload":[2020]}
+E	32	9004	7	0	{"value":0}
+E	32	12	4	2	{"passed":3}
+E	35	9004	7	0	{"passed":1}
+E	36	9004	7	0	{"value":1}
+E	36	2019	8	0	{"delivered":1}
+E	36	2019	8	0	{"passed":1}
+E	36	1017	2	4	{"passed":3}
+E	36	1	8	0	{"payload":[]}
+E	36	1	8	0	{"delivered":1}
+D	36	1	8	0	{"missed_items":[],"delivered_items":[2020],"delivered_to":2019}
+E	39	9005	9	0	{"passed":1}
+E	45	2020	0	2	{"picked":2}
+E	45	2020	0	2	{"passed":2}
+E	45	12	0	2	{"payload":[2020]}
+E	53	9004	7	0	{"value":0}
+E	53	1	6	2	{"passed":3}
+E	58	9004	7	0	{"passed":2}
+E	58	12	4	2	{"passed":4}
+E	59	9004	7	0	{"value":1}
+E	59	2019	8	0	{"delivered":2}
+E	59	2019	8	0	{"passed":2}
+E	59	1017	2	4	{"passed":4}
+E	59	12	8	0	{"payload":[]}
+E	59	12	8	0	{"delivered":1}
+D	59	12	8	0	{"missed_items":[],"delivered_items":[2020],"delivered_to":2019}
+E	62	9005	9	0	{"passed":2}
+E	70	2020	0	2	{"picked":3}
+E	70	2020	0	2	{"passed":3}
+E	70	1	6	2	{"passed":4}
+E	70	1	0	2	{"payload":[2020]}
+E	78	9004	7	0	{"value":0}
+E	78	12	4	2	{"passed":5}
+E	81	9004	7	0	{"passed":3}
+E	82	9004	7	0	{"value":1}
+E	82	2019	8	0	{"delivered":3}
+E	82	2019	8	0	{"passed":3}
+E	82	1017	2	4	{"passed":5}
+E	82	1	8	0	{"payload":[]}
+E	82	1	8	0	{"delivered":2}
+D	82	1	8	0	{"missed_items":[],"delivered_items":[2020],"delivered_to":2019}
+E	82	0	0	0	{"goals_completed":1}
+E	82	0	0	0	{"final_condition":10}
+
+PLAYER
+

@@ -1,0 +1,130 @@
+filename	C:\Users\jlb539\AppData\LocalLow\DefaultCompany\ParallelProg\me_out_5666732682044634943.txt
+timestamp	20171006151810
+
+METADATA
+level_id	9
+level_title	Intro to Parallel
+goal_string	Deliver Both Packages
+goal_struct	{"desired":[{"condition":"gt","thread_id":0,"property":"delivered","id":3001,"type":"delivery","value":0},{"condition":"gt","thread_id":0,"property":"delivered","id":3002,"type":"delivery","value":0}],"required":[{"condition":"gt","thread_id":0,"property":"delivered","id":3001,"type":"delivery","value":0},{"condition":"gt","thread_id":0,"property":"delivered","id":3002,"type":"delivery","value":0},{"condition":"gt","thread_id":0,"property":"delivered","id":1001,"type":"thread","value":0},{"condition":"gt","thread_id":0,"property":"delivered","id":1002,"type":"thread","value":0}]}
+player_palette	{"painter":{"count":0},"semaphore":{"count":-1},"signal":{"count":-1},"colors":{"count":1}}
+time_pickup_min	0
+time_delivery_min	1
+time_exchange_min	0
+time_pickup_max	0
+time_delivery_max	3
+time_exchange_max	0
+board_width	12
+board_height	12
+
+LAYOUT
+FEEEEEEEEEEC
+J----------J
+J------FEEEK
+J------J---J
+J------J---J
+J------J---J
+J------LEEEK
+NEEEC------J
+J---J------J
+J---J------J
+J---J------J
+LEEEMEEEEEEI
+
+COLORS
+############
+#----------#
+#------!!!!#
+#------!---"
+#------!---"
+#------!---"
+#------!!!!#
+#####------#
+#---#------#
+#---#------#
+#---#------#
+############
+
+DIRECTIONS
+>>>>>>>>>>>V
+A          V
+A      V<<<X
+A      V   V
+A      V   V
+A      V   V
+A      >>>>V
+A<<<<      V
+A   A      V
+A   A      V
+A   A      V
+A<<<X<<<<<<<
+
+COMPONENTS
+9007	signal	11	1	P	E	{"color":0,"link":5001,"passed":0}
+5001	conditional	11	2	S	L	{"current":1,"color":0,"directions":["South","West"],"passed":0}
+4001	diverter	4	11	S	L	{"color":0,"direction_condition":"West","directions_colors":[[],[],[],[]],"passed":0,"directions_types":[["Conditional"],[],[],["Limited"]],"direction_default":"West"}
+3002	delivery	1	11	S	L	{"accepted_types":["Conditional"],"color":0,"missed":0,"delivered":0,"passed":0,"accepted_colors":[],"strict":0,"consumer":-1,"denominator":1}
+3001	delivery	3	7	S	L	{"accepted_types":["Limited"],"color":0,"missed":0,"delivered":0,"passed":0,"accepted_colors":[],"strict":0,"consumer":-1,"denominator":1}
+2002	pickup	11	5	S	L	{"color":1,"picked":0,"passed":0,"type":"Conditional"}
+2001	pickup	7	4	S	L	{"color":1,"picked":0,"passed":0,"type":"Limited"}
+1002	thread	5	0	S	L	{"time_pickup_min":-1,"color":2,"initial_direction":"East","missed":0,"time_delivery_max":-1,"delivered":0,"time_exchange_max":-1,"capacity":-1,"time_pickup_max":-1,"delay":0,"picked":0,"time_delivery_min":-1,"passed":0,"time_exchange_min":-1,"direction":"East"}
+1001	thread	1	0	S	L	{"time_pickup_min":-1,"color":1,"initial_direction":"East","missed":0,"time_delivery_max":-1,"delivered":0,"time_exchange_max":-1,"capacity":-1,"time_pickup_max":-1,"delay":0,"picked":0,"time_delivery_min":-1,"passed":0,"time_exchange_min":-1,"direction":"East"}
+
+EXECUTION
+S	65	1001	11	3	{"speed":0.0}
+M	0	1001	1	0	
+M	0	1002	5	0	
+M	1	1001	2	0	
+M	1	1002	6	0	
+M	6	1002	11	0	
+M	7	1002	11	1	
+M	10	1001	11	0	
+M	11	1001	11	1	
+M	12	1001	11	2	
+M	12	1002	11	2	
+M	13	1001	10	2	
+M	13	1002	10	2	
+M	16	1001	7	2	
+M	18	1001	7	4	
+M	19	1001	7	5	
+M	20	1001	7	6	
+M	24	1001	11	6	
+M	29	1001	11	11	
+M	36	1001	4	11	
+M	40	1001	4	7	
+M	41	1001	3	7	
+M	42	1001	2	7	
+M	44	1001	0	7	
+M	51	1001	0	0	
+M	52	1001	1	0	
+M	53	1001	2	0	
+M	62	1001	11	0	
+M	63	1001	11	1	
+M	64	1001	11	2	
+M	65	1001	11	3	
+E	1	3002	1	11	{"denominator":-1}
+E	1	3001	3	7	{"denominator":-1}
+E	1	1002	5	0	{"passed":1}
+E	1	1001	1	0	{"passed":1}
+E	11	1002	5	0	{"passed":2}
+E	12	9007	11	1	{"passed":2}
+E	13	5001	11	2	{"passed":2}
+E	19	2001	7	4	{"available":0}
+E	19	2001	7	4	{"picked":1}
+E	19	2001	7	4	{"passed":1}
+E	19	1001	7	4	{"payload":[2001]}
+E	41	4001	4	11	{"passed":1}
+E	42	3001	3	7	{"delivered":1}
+E	42	3001	3	7	{"passed":1}
+E	42	1001	3	7	{"payload":[]}
+E	42	1001	3	7	{"delivered":1}
+D	42	1001	3	7	{"missed_items":[],"delivered_items":[2001],"delivered_to":3001}
+E	42	0	0	0	{"goals_completed":3}
+E	53	1001	1	0	{"passed":2}
+E	63	5001	11	2	{"current":0}
+E	63	1002	5	0	{"passed":3}
+E	64	9007	11	1	{"passed":3}
+E	65	5001	11	2	{"passed":3}
+E	65	0	0	0	{"final_condition":513,"goal_descriptions":["e24 A delivery point did not get all the packages it was supposed.","e14 An arrow did not deliver all the packages it was supposed."],"goal_state":[true,false,true,false,true,false]}
+
+PLAYER
+

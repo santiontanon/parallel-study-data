@@ -1,0 +1,149 @@
+filename	C:\Users\LaCaqGrande\AppData\LocalLow\DefaultCompany\ParallelProg\me_out_8448831328819423071.txt
+timestamp	20171006022732
+
+METADATA
+level_id	10
+level_title	Intro to Parallel
+goal_string	Each Arrow Delivers Twice
+goal_struct	{"desired":[],"required":[{"condition":"gt","thread_id":0,"property":"delivered","id":1001,"type":"thread","value":1},{"condition":"gt","thread_id":0,"property":"delivered","id":1002,"type":"thread","value":1},{"condition":"gt","thread_id":0,"property":"delivered","id":3001,"type":"delivery","value":3}]}
+player_palette	{"painter":{"count":0},"semaphore":{"count":-1},"signal":{"count":-1},"colors":{"count":1}}
+time_pickup_min	0
+time_delivery_min	1
+time_exchange_min	0
+time_pickup_max	0
+time_delivery_max	3
+time_exchange_max	0
+board_width	17
+board_height	9
+
+LAYOUT
+FEEEGEEEEEEEGEEEC
+J---J-------J---J
+J---J-------J---J
+J---J-------J---J
+LEEEOEEEEEEEOEEEI
+----J-------J----
+----J-------J----
+----J-------J----
+----LEEEEEEEI----
+
+COLORS
+!!!!)))))))))!!!!
+!---(-------(---!
+!---(-------(---!
+!---(-------(---!
+!!!!)!!!!!!!)!!!!
+----(-------(----
+----(-------(----
+----(-------(----
+----(((((((((----
+
+DIRECTIONS
+V<<<X<<<<<<<<<<<<
+V   V       A   A
+V   V       A   A
+V   V       A   A
+>>>>X>>>>>>>X>>>A
+    V       A    
+    V       A    
+    V       A    
+    >>>>>>>>A    
+
+COMPONENTS
+9065	signal	13	4	P	E	{"color":0,"link":5001,"passed":0}
+1001	thread	0	2	S	L	{"time_pickup_min":-1,"color":1,"initial_direction":"South","missed":0,"time_delivery_max":-1,"delivered":0,"time_exchange_max":-1,"capacity":-1,"time_pickup_max":-1,"delay":0,"picked":0,"time_delivery_min":-1,"passed":0,"time_exchange_min":-1,"direction":"South"}
+1002	thread	5	8	S	L	{"time_pickup_min":-1,"color":4,"initial_direction":"East","missed":0,"time_delivery_max":-1,"delivered":0,"time_exchange_max":-1,"capacity":-1,"time_pickup_max":-1,"delay":0,"picked":0,"time_delivery_min":-1,"passed":0,"time_exchange_min":-1,"direction":"East"}
+2001	pickup	8	4	S	L	{"color":1,"picked":0,"passed":0,"type":"Conditional"}
+2002	pickup	8	8	S	L	{"color":1,"picked":0,"passed":0,"type":"Conditional"}
+3001	delivery	8	0	S	L	{"accepted_types":["Conditional"],"color":0,"missed":0,"delivered":0,"passed":0,"accepted_colors":[],"strict":0,"consumer":-1,"denominator":4}
+5001	conditional	12	4	S	L	{"current":1,"color":0,"directions":["North","East"],"passed":0}
+9063	semaphore	9	8	P	E	{"stopped":0,"color":0,"passed":0,"value":0}
+9064	signal	3	0	P	E	{"color":0,"link":9063,"passed":0}
+
+EXECUTION
+S	80	1002	8	8	{"speed":0.0}
+M	0	1001	0	2	
+M	0	1002	5	8	
+M	1	1001	0	3	
+M	1	1002	6	8	
+M	2	1001	0	4	
+M	3	1002	8	8	
+M	6	1001	4	4	
+M	10	1001	8	4	
+M	11	1001	9	4	
+M	14	1001	12	4	
+M	15	1001	13	4	
+M	16	1001	14	4	
+M	18	1001	16	4	
+M	22	1001	16	0	
+M	26	1001	12	0	
+M	30	1001	8	0	
+M	31	1001	7	0	
+M	34	1001	4	0	
+M	35	1001	3	0	
+M	36	1001	2	0	
+M	36	1002	9	8	
+M	37	1002	10	8	
+M	38	1001	0	0	
+M	40	1001	0	2	
+M	41	1001	0	3	
+M	42	1002	12	8	
+M	46	1002	12	4	
+M	47	1001	0	4	
+M	47	1002	12	3	
+M	51	1001	4	4	
+M	55	1001	8	4	
+M	56	1001	9	4	
+M	58	1002	12	0	
+M	62	1002	8	0	
+M	63	1002	7	0	
+M	65	1001	12	4	
+M	66	1001	12	3	
+M	68	1002	4	0	
+M	72	1002	4	4	
+M	76	1002	4	8	
+M	77	1002	5	8	
+M	78	1002	6	8	
+M	80	1002	8	8	
+E	1	1001	0	2	{"passed":1}
+E	1	1002	5	8	{"passed":1}
+E	1	3001	8	0	{"denominator":-1}
+E	11	2001	8	4	{"available":0}
+E	11	2001	8	4	{"picked":1}
+E	11	2001	8	4	{"passed":1}
+E	11	1001	8	4	{"payload":[2001]}
+E	15	5001	12	4	{"current":0}
+E	15	5001	12	4	{"passed":1}
+E	16	9065	13	4	{"passed":1}
+E	31	2001	8	4	{"available":1}
+E	31	3001	8	0	{"delivered":1}
+E	31	3001	8	0	{"passed":1}
+E	31	1001	8	0	{"payload":[]}
+E	31	1001	8	0	{"delivered":1}
+D	31	1001	8	0	{"missed_items":[],"delivered_items":[2001],"delivered_to":3001}
+E	35	9063	9	8	{"value":1}
+E	36	2002	8	8	{"available":0}
+E	36	2002	8	8	{"picked":1}
+E	36	2002	8	8	{"passed":1}
+E	36	9063	9	8	{"value":0}
+E	36	9064	3	0	{"passed":1}
+E	36	1002	8	8	{"payload":[2002]}
+E	40	9063	9	8	{"passed":1}
+E	46	1001	0	2	{"passed":2}
+E	55	5001	12	4	{"passed":2}
+E	62	2001	8	4	{"available":0}
+E	62	2001	8	4	{"picked":2}
+E	62	2001	8	4	{"passed":2}
+E	62	1001	8	4	{"payload":[2001]}
+E	65	2002	8	8	{"available":1}
+E	65	3001	8	0	{"delivered":2}
+E	65	3001	8	0	{"passed":2}
+E	65	1002	8	0	{"payload":[]}
+E	65	1002	8	0	{"delivered":1}
+D	65	1002	8	0	{"missed_items":[],"delivered_items":[2002],"delivered_to":3001}
+E	77	5001	12	4	{"passed":3}
+E	78	1002	5	8	{"passed":2}
+E	80	0	0	0	{"final_condition":513,"goal_descriptions":["e14 An arrow did not deliver all the packages it was supposed.","e14 An arrow did not deliver all the packages it was supposed.","e24 A delivery point did not get all the packages it was supposed."],"goal_state":[false,false,false]}
+
+PLAYER
+

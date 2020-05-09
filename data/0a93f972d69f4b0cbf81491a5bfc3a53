@@ -1,0 +1,109 @@
+filename	/Users/tunguyen/Library/Application Support/unity.DefaultCompany.ParallelProg/play_out_16084429238941485488.txt
+timestamp	20171010141234
+
+METADATA
+level_id	10
+level_title	Intro to Parallel
+goal_string	Each Arrow Delivers Twice
+goal_struct	{"desired":[],"required":[{"condition":"gt","thread_id":0,"property":"delivered","id":1001,"type":"thread","value":1},{"condition":"gt","thread_id":0,"property":"delivered","id":1002,"type":"thread","value":1},{"condition":"gt","thread_id":0,"property":"delivered","id":3001,"type":"delivery","value":3}]}
+player_palette	{"painter":{"count":0},"semaphore":{"count":-1},"signal":{"count":-1},"colors":{"count":1}}
+time_pickup_min	0
+time_delivery_min	1
+time_exchange_min	0
+time_pickup_max	0
+time_delivery_max	3
+time_exchange_max	0
+board_width	17
+board_height	9
+
+LAYOUT
+FEEEGEEEEEEEGEEEC
+J---J-------J---J
+J---J-------J---J
+J---J-------J---J
+LEEEOEEEEEEEOEEEI
+----J-------J----
+----J-------J----
+----J-------J----
+----LEEEEEEEI----
+
+COLORS
+!!!!)))))))))!!!!
+!---(-------(---!
+!---(-------(---!
+!---(-------(---!
+!!!!)!!!!!!!)!!!!
+----(-------(----
+----(-------(----
+----(-------(----
+----(((((((((----
+
+DIRECTIONS
+V<<<X<<<<<<<<<<<<
+V   V       A   A
+V   V       A   A
+V   V       A   A
+>>>>X>>>>>>>X>>>A
+    V       A    
+    V       A    
+    V       A    
+    >>>>>>>>A    
+
+COMPONENTS
+9063	semaphore	9	0	P	E	{"stopped":0,"color":0,"passed":0,"value":0}
+1001	thread	0	2	S	L	{"time_pickup_min":-1,"color":1,"initial_direction":"South","missed":0,"time_delivery_max":-1,"delivered":0,"time_exchange_max":-1,"capacity":-1,"time_pickup_max":-1,"delay":0,"picked":0,"time_delivery_min":-1,"passed":0,"time_exchange_min":-1,"direction":"South"}
+1002	thread	5	8	S	L	{"time_pickup_min":-1,"color":4,"initial_direction":"East","missed":0,"time_delivery_max":-1,"delivered":0,"time_exchange_max":-1,"capacity":-1,"time_pickup_max":-1,"delay":0,"picked":0,"time_delivery_min":-1,"passed":0,"time_exchange_min":-1,"direction":"East"}
+2001	pickup	8	4	S	L	{"color":1,"picked":0,"passed":0,"type":"Conditional"}
+2002	pickup	8	8	S	L	{"color":1,"picked":0,"passed":0,"type":"Conditional"}
+3001	delivery	8	0	S	L	{"accepted_types":["Conditional"],"color":0,"missed":0,"delivered":0,"passed":0,"accepted_colors":[],"strict":0,"consumer":-1,"denominator":4}
+5001	conditional	12	4	S	L	{"current":1,"color":0,"directions":["North","East"],"passed":0}
+9060	semaphore	7	8	P	E	{"stopped":0,"color":0,"passed":0,"value":0}
+9061	signal	11	4	P	E	{"color":0,"link":9060,"passed":0}
+9062	signal	12	5	P	E	{"color":0,"link":5001,"passed":0}
+
+EXECUTION
+M	0	1001	0	2	
+M	0	1002	5	8	
+M	1	1001	0	3	
+M	2	1001	0	4	
+M	6	1001	4	4	
+M	10	1001	8	4	
+M	2	1002	6	8	
+M	11	1001	9	4	
+M	13	1001	11	4	
+M	14	1001	12	4	
+M	15	1002	7	8	
+M	16	1002	8	8	
+M	17	1001	13	4	
+M	18	1002	9	8	
+M	21	1001	16	4	
+M	25	1001	16	0	
+M	29	1001	12	0	
+M	34	1002	12	8	
+M	37	1002	12	5	
+M	38	1002	12	4	
+M	39	1002	12	3	
+M	42	1002	12	0	
+E	1	1001	0	2	{"passed":1}
+E	1	3001	8	0	{"denominator":-1}
+E	10	1002	5	8	{"passed":1}
+E	11	2001	8	4	{"available":0}
+E	11	2001	8	4	{"picked":1}
+E	11	2001	8	4	{"passed":1}
+E	11	1001	8	4	{"payload":[2001]}
+E	13	9060	7	8	{"value":1}
+E	14	9061	11	4	{"passed":1}
+E	15	9060	7	8	{"value":0}
+E	16	9060	7	8	{"passed":1}
+E	17	5001	12	4	{"passed":1}
+E	18	2002	8	8	{"available":0}
+E	18	2002	8	8	{"picked":1}
+E	18	2002	8	8	{"passed":1}
+E	18	1002	8	8	{"payload":[2002]}
+E	37	5001	12	4	{"current":0}
+E	38	9062	12	5	{"passed":1}
+E	39	5001	12	4	{"passed":2}
+E	44	0	0	0	{"final_condition":1}
+
+PLAYER
+

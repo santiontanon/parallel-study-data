@@ -1,0 +1,94 @@
+filename	/Users/jv384/Library/Application Support/unity.DefaultCompany.ParallelProg/play_out_1409400770708933591.txt
+timestamp	20170801202514
+
+METADATA
+level_id	2
+level_title	More Arrows
+goal_string	Deliver 2 packages per arrow and to each delivery point
+goal_struct	{"desired":[{"condition":"gt","thread_id":0,"property":"delivered","id":3001,"type":"delivery","value":1},{"condition":"gt","thread_id":0,"property":"delivered","id":3002,"type":"delivery","value":1},{"condition":"gt","thread_id":0,"property":"delivered","id":1001,"type":"thread","value":1},{"condition":"gt","thread_id":0,"property":"delivered","id":1002,"type":"thread","value":1}],"required":[{"condition":"gt","thread_id":0,"property":"delivered","id":3001,"type":"delivery","value":1},{"condition":"gt","thread_id":0,"property":"delivered","id":3002,"type":"delivery","value":1}]}
+player_palette	{"painter":{"count":0},"semaphore":{"count":-1},"signal":{"count":-1},"colors":{"count":2}}
+time_pickup_min	0
+time_delivery_min	1
+time_exchange_min	0
+time_pickup_max	0
+time_delivery_max	3
+time_exchange_max	0
+board_width	8
+board_height	8
+
+LAYOUT
+FEEEGEEC
+J---J--J
+J---J--J
+J---J--J
+J---J--J
+J---J--J
+J---J--J
+LEEEMEEI
+
+COLORS
+########
+#---#--#
+#---#--#
+#---#--#
+#---#--#
+#---#--#
+#---#--#
+########
+
+DIRECTIONS
+V<<<X>>V
+V   A  V
+V   A  V
+V   A  V
+V   A  V
+V   A  V
+V   A  V
+>>>>A<<<
+
+COMPONENTS
+9005	semaphore	4	4	P	E	{"stopped":0,"color":0,"passed":0,"value":0}
+9003	semaphore	4	1	P	E	{"stopped":0,"color":0,"passed":0,"value":1}
+4001	intersection	4	7	S	L	{"color":0,"directions":["North","North","North","North","North","North"],"passed":0}
+5001	conditional	4	0	S	L	{"current":1,"color":0,"directions":["East","West"],"passed":0}
+3002	delivery	7	7	S	L	{"accepted_types":["Conditional"],"color":0,"missed":0,"delivered":0,"passed":0,"accepted_colors":[1,2],"strict":0,"consumer":-1,"denominator":2}
+3001	delivery	0	7	S	L	{"accepted_types":["Conditional"],"color":0,"missed":0,"delivered":0,"passed":0,"accepted_colors":[1,2],"strict":0,"consumer":-1,"denominator":2}
+2002	pickup	7	0	S	L	{"color":2,"picked":0,"passed":0,"type":"Conditional"}
+2001	pickup	0	0	S	L	{"color":1,"picked":0,"passed":0,"type":"Conditional"}
+1002	thread	4	5	S	L	{"time_pickup_min":-1,"color":2,"initial_direction":"North","missed":0,"time_delivery_max":-1,"delivered":0,"time_exchange_max":-1,"capacity":-1,"time_pickup_max":-1,"delay":0,"picked":0,"time_delivery_min":-1,"passed":0,"time_exchange_min":-1,"direction":"North"}
+1001	thread	4	2	S	L	{"time_pickup_min":-1,"color":1,"initial_direction":"North","missed":0,"time_delivery_max":-1,"delivered":0,"time_exchange_max":-1,"capacity":-1,"time_pickup_max":-1,"delay":0,"picked":0,"time_delivery_min":-1,"passed":0,"time_exchange_min":-1,"direction":"North"}
+
+EXECUTION
+S	0	1002	4	5	{"speed":0.0}
+M	0	1002	4	5	
+M	0	1001	4	2	
+M	1	1001	4	1	
+M	2	1001	4	0	
+M	3	1001	3	0	
+M	6	1001	0	0	
+M	7	1001	0	1	
+M	13	1001	0	7	
+M	14	1001	1	7	
+M	17	1001	4	7	
+M	0	1002	4	5	
+E	1	9003	4	1	{"value":0}
+E	1	3002	7	7	{"denominator":-1}
+E	1	3001	0	7	{"denominator":-1}
+E	1	1001	4	2	{"passed":1}
+E	2	9003	4	1	{"passed":1}
+E	3	5001	4	0	{"passed":1}
+E	7	2001	0	0	{"available":0}
+E	7	2001	0	0	{"picked":1}
+E	7	2001	0	0	{"passed":1}
+E	7	1001	0	0	{"payload":[2001]}
+E	14	3001	0	7	{"delivered":1}
+E	14	3001	0	7	{"passed":1}
+E	14	2001	0	0	{"available":1}
+E	14	1001	0	7	{"payload":[]}
+E	14	1001	0	7	{"delivered":1}
+D	14	1001	0	7	{"missed_items":[],"delivered_items":[2001],"delivered_to":3001}
+E	19	4001	4	7	{"passed":1}
+E	19	0	0	0	{"final_condition":1}
+
+PLAYER
+

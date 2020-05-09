@@ -1,0 +1,154 @@
+filename	/Users/josepvalls/Library/Application Support/DefaultCompany/ParallelProg/me_out_3064042691978342441.txt
+timestamp	20170905222932
+
+METADATA
+level_id	1
+level_title	PCG Level
+goal_string	Deliver all packages indicated in each delivery point.
+goal_struct	{"desired":[],"required":[{"condition":"gt","thread_id":0,"property":"delivered","id":2019,"type":"delivery","value":2}]}
+player_palette	{"painter":{"count":0},"semaphore":{"count":0},"signal":{"count":0},"colors":{"count":1}}
+time_pickup_min	0
+time_delivery_min	3
+time_exchange_min	1
+time_pickup_max	0
+time_delivery_max	3
+time_exchange_max	1
+board_width	11
+board_height	5
+
+LAYOUT
+FEEEEEEEEEC
+J---------J
+J-FEEEEEEEK
+J-J-------J
+LEMEEEEEEEI
+
+COLORS
+           
+ --------- 
+ -         
+ - ------- 
+           
+
+DIRECTIONS
+XXXXXXXXXXX
+X         X
+X V<<<<<<<X
+X V       A
+XXX>>>>>>>A
+
+COMPONENTS
+9001	signal	4	4	P	E	{"color":0,"link":1015,"passed":0}
+0	thread	6	2	S	L	{"time_pickup_min":-1,"color":1,"initial_direction":"West","missed":0,"time_delivery_max":-1,"delivered":0,"time_exchange_max":-1,"capacity":1,"time_pickup_max":-1,"delay":0,"picked":0,"time_delivery_min":-1,"passed":0,"time_exchange_min":-1,"direction":"West"}
+1015	conditional	2	4	S	L	{"current":0,"color":0,"directions":["East","West"],"passed":0}
+2014	pickup	0	2	S	L	{"color":1,"picked":0,"passed":0,"type":"Conditional"}
+2019	delivery	8	0	S	L	{"accepted_types":[],"color":1,"missed":0,"delivered":0,"passed":0,"accepted_colors":[],"strict":0,"consumer":-1,"denominator":3}
+11	thread	4	2	S	L	{"time_pickup_min":-1,"color":1,"initial_direction":"West","missed":0,"time_delivery_max":-1,"delivered":0,"time_exchange_max":-1,"capacity":1,"time_pickup_max":-1,"delay":0,"picked":0,"time_delivery_min":-1,"passed":0,"time_exchange_min":-1,"direction":"West"}
+
+EXECUTION
+S	84	0	2	4	{"speed":0.0}
+S	84	11	9	0	{"speed":0.0}
+M	0	0	6	2	
+M	0	11	4	2	
+M	1	0	5	2	
+M	1	11	3	2	
+M	2	11	2	2	
+M	4	0	2	2	
+M	4	11	2	4	
+M	6	0	2	4	
+M	7	0	3	4	
+M	8	0	4	4	
+M	8	11	1	4	
+M	9	0	5	4	
+M	9	11	0	4	
+M	11	11	0	2	
+M	12	11	0	1	
+M	16	0	10	4	
+M	18	0	10	2	
+M	22	0	6	2	
+M	23	0	5	2	
+M	23	11	0	0	
+M	31	11	8	0	
+M	32	11	9	0	
+M	34	0	2	2	
+M	36	0	2	4	
+M	37	0	1	4	
+M	37	11	10	0	
+M	39	11	10	2	
+M	45	11	4	2	
+M	46	0	0	4	
+M	46	11	3	2	
+M	48	0	0	2	
+M	49	0	0	1	
+M	49	11	2	2	
+M	51	11	2	4	
+M	52	0	0	0	
+M	52	11	1	4	
+M	60	0	8	0	
+M	61	0	9	0	
+M	61	11	0	4	
+M	63	11	0	2	
+M	64	0	10	0	
+M	64	11	0	1	
+M	66	0	10	2	
+M	70	0	6	2	
+M	71	0	5	2	
+M	71	11	0	0	
+M	79	11	8	0	
+M	80	11	9	0	
+M	82	0	2	2	
+M	84	0	2	4	
+E	1	0	6	2	{"passed":1}
+E	1	2019	8	0	{"denominator":-1}
+E	1	11	4	2	{"passed":1}
+E	6	11	4	2	{"passed":2}
+E	7	1015	2	4	{"passed":1}
+E	8	1015	2	4	{"current":1}
+E	8	1015	2	4	{"passed":2}
+E	11	9001	4	4	{"passed":1}
+E	22	2014	0	2	{"available":0}
+E	22	2014	0	2	{"picked":1}
+E	22	2014	0	2	{"passed":1}
+E	22	1	10	2	{"passed":1}
+E	22	11	0	2	{"payload":[2014]}
+E	31	0	6	2	{"passed":2}
+E	36	2014	0	2	{"available":1}
+E	36	2019	8	0	{"delivered":1}
+E	36	2019	8	0	{"passed":1}
+E	36	11	4	2	{"passed":3}
+E	36	11	8	0	{"payload":[]}
+E	36	11	8	0	{"delivered":1}
+D	36	11	8	0	{"missed_items":[],"delivered_items":[2014],"delivered_to":2019}
+E	45	0	6	2	{"passed":3}
+E	45	1015	2	4	{"passed":3}
+E	45	1	10	2	{"passed":2}
+E	48	11	4	2	{"passed":4}
+E	51	2014	0	2	{"available":0}
+E	51	2014	0	2	{"picked":2}
+E	51	2014	0	2	{"passed":2}
+E	51	0	0	2	{"payload":[2014]}
+E	60	1015	2	4	{"passed":4}
+E	63	2014	0	2	{"available":1}
+E	63	2019	8	0	{"delivered":2}
+E	63	2019	8	0	{"passed":2}
+E	63	0	8	0	{"payload":[]}
+E	63	0	8	0	{"delivered":1}
+D	63	0	8	0	{"missed_items":[],"delivered_items":[2014],"delivered_to":2019}
+E	70	2014	0	2	{"available":0}
+E	70	2014	0	2	{"picked":3}
+E	70	2014	0	2	{"passed":3}
+E	70	1	10	2	{"passed":3}
+E	70	11	0	2	{"payload":[2014]}
+E	79	0	6	2	{"passed":4}
+E	84	2014	0	2	{"available":1}
+E	84	2019	8	0	{"delivered":3}
+E	84	2019	8	0	{"passed":3}
+E	84	11	4	2	{"passed":5}
+E	84	11	8	0	{"payload":[]}
+E	84	11	8	0	{"delivered":2}
+D	84	11	8	0	{"missed_items":[],"delivered_items":[2014],"delivered_to":2019}
+E	84	0	0	0	{"goals_completed":1}
+E	84	0	0	0	{"final_condition":10}
+
+PLAYER
+

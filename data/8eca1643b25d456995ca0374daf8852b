@@ -1,0 +1,349 @@
+filename	/Users/josepvalls/Library/Application Support/DefaultCompany/ParallelProg/play_out_562632524808983437.txt
+timestamp	20171004122226
+
+METADATA
+level_id	12
+level_title	Intro to Parallel
+goal_string	Deliver Both Packages Twice
+goal_struct	{"desired":[],"required":[{"condition":"gt","thread_id":0,"property":"delivered","id":3001,"type":"delivery","value":1},{"condition":"gt","thread_id":0,"property":"delivered","id":3002,"type":"delivery","value":1}]}
+player_palette	{"painter":{"count":0},"semaphore":{"count":-1},"signal":{"count":-1},"colors":{"count":1}}
+time_pickup_min	0
+time_delivery_min	1
+time_exchange_min	0
+time_pickup_max	0
+time_delivery_max	3
+time_exchange_max	0
+board_width	15
+board_height	15
+
+LAYOUT
+------FEEEGEEEC
+------J---J---J
+------J---J---J
+------J---J---J
+FEEEC-J---J---J
+J---J-J---J---J
+J---J-LEEEOEEEK
+J---J-----J---J
+NEEEOEEEC-J---J
+J---J---J-J---J
+J---J---J-LEEEI
+J---J---J------
+J---J---J------
+J---J---J------
+LEEEMEEEI------
+
+COLORS
+------(((((((((
+------(---(---(
+------(---(---(
+------(---(---(
+$$$$$-(---(---(
+$---$-(---(---(
+$---$-(((((((((
+$---$-----(---(
+$$$$$$$$$-(---(
+$---$---$-(---(
+$---$---$-(((((
+$---$---$------
+$---$---$------
+$---$---$------
+$$$$$$$$$------
+
+DIRECTIONS
+      >>>>>>>>V
+      A   A   V
+      A   A   V
+      A   A   V
+V<<<< A   A   V
+V   A A   A   V
+V   A A<<<X<<<<
+V   A     V   A
+>>>>X>>>V V   A
+A   V   V V   A
+A   V   V >>>>A
+A   V   V      
+A   V   V      
+A   V   V      
+A<<<<<<<<      
+
+COMPONENTS
+5002	conditional	10	6	S	L	{"current":1,"color":0,"directions":["North","South","West"],"passed":0}
+5001	conditional	4	8	S	L	{"current":0,"color":0,"directions":["North","East","South"],"passed":0}
+4002	exchange	6	3	S	L	{"delay":0,"color":0,"stop":0,"link":4001,"exchanged":0,"passed":0,"strict":1,"value":0}
+4001	exchange	8	11	S	L	{"delay":0,"color":0,"stop":0,"link":4002,"exchanged":0,"passed":0,"strict":1,"value":0}
+3002	delivery	4	11	S	L	{"accepted_types":["Conditional"],"color":0,"missed":0,"delivered":0,"passed":0,"accepted_colors":[2],"strict":0,"consumer":-1,"denominator":2}
+3001	delivery	10	3	S	L	{"accepted_types":["Conditional"],"color":0,"missed":0,"delivered":0,"passed":0,"accepted_colors":[1],"strict":0,"consumer":-1,"denominator":2}
+2002	pickup	12	10	S	L	{"color":2,"picked":0,"passed":0,"type":"Conditional"}
+2001	pickup	2	4	S	L	{"color":1,"picked":0,"passed":0,"type":"Conditional"}
+1002	thread	13	6	S	L	{"time_pickup_min":-1,"color":4,"initial_direction":"West","missed":0,"time_delivery_max":-1,"delivered":0,"time_exchange_max":-1,"capacity":-1,"time_pickup_max":-1,"delay":0,"picked":0,"time_delivery_min":-1,"passed":0,"time_exchange_min":-1,"direction":"West"}
+1001	thread	1	8	S	L	{"time_pickup_min":-1,"color":3,"initial_direction":"East","missed":0,"time_delivery_max":-1,"delivered":0,"time_exchange_max":-1,"capacity":-1,"time_pickup_max":-1,"delay":0,"picked":0,"time_delivery_min":-1,"passed":0,"time_exchange_min":-1,"direction":"East"}
+
+EXECUTION
+S	285	1002	13	10	{"speed":0.0}
+S	285	1001	2	8	{"speed":0.0}
+M	0	1001	1	8	
+M	0	1002	13	6	
+M	1	1001	2	8	
+M	2	1002	12	6	
+M	3	1001	4	8	
+M	4	1001	4	7	
+M	5	1002	10	6	
+M	8	1001	4	4	
+M	10	1001	2	4	
+M	11	1001	1	4	
+M	12	1002	10	7	
+M	13	1001	0	4	
+M	15	1002	10	10	
+M	17	1001	0	8	
+M	17	1002	12	10	
+M	18	1001	1	8	
+M	19	1002	13	10	
+M	20	1001	2	8	
+M	20	1002	14	10	
+M	24	1002	14	6	
+M	25	1002	13	6	
+M	26	1002	12	6	
+M	28	1001	4	8	
+M	29	1001	4	7	
+M	30	1002	10	6	
+M	31	1002	10	7	
+M	33	1001	4	4	
+M	35	1001	2	4	
+M	36	1001	1	4	
+M	37	1001	0	4	
+M	41	1001	0	8	
+M	42	1001	1	8	
+M	45	1002	10	10	
+M	47	1002	12	10	
+M	48	1002	13	10	
+M	49	1002	14	10	
+M	53	1002	14	6	
+M	54	1002	13	6	
+M	55	1002	12	6	
+M	57	1002	10	6	
+M	58	1001	2	8	
+M	59	1002	10	7	
+M	61	1001	4	8	
+M	62	1002	10	10	
+M	64	1002	12	10	
+M	65	1002	13	10	
+M	66	1002	14	10	
+M	70	1002	14	6	
+M	71	1002	13	6	
+M	72	1001	4	7	
+M	72	1002	12	6	
+M	75	1001	4	4	
+M	77	1001	2	4	
+M	78	1001	1	4	
+M	79	1002	10	6	
+M	80	1001	0	4	
+M	84	1001	0	8	
+M	85	1001	1	8	
+M	86	1001	2	8	
+M	86	1002	10	7	
+M	88	1001	4	8	
+M	89	1001	4	7	
+M	92	1002	10	10	
+M	94	1002	12	10	
+M	95	1002	13	10	
+M	97	1001	4	4	
+M	99	1001	2	4	
+M	100	1002	14	10	
+M	104	1002	14	6	
+M	105	1002	13	6	
+M	106	1001	1	4	
+M	106	1002	12	6	
+M	107	1001	0	4	
+M	111	1001	0	8	
+M	112	1001	1	8	
+M	113	1001	2	8	
+M	115	1001	4	8	
+M	116	1001	4	7	
+M	118	1002	10	6	
+M	119	1001	4	4	
+M	121	1001	2	4	
+M	122	1001	1	4	
+M	122	1002	10	7	
+M	123	1001	0	4	
+M	127	1001	0	8	
+M	128	1001	1	8	
+M	129	1001	2	8	
+M	131	1002	10	10	
+M	133	1002	12	10	
+M	135	1001	4	8	
+M	136	1001	4	7	
+M	136	1002	13	10	
+M	137	1002	14	10	
+M	139	1001	4	4	
+M	141	1001	2	4	
+M	141	1002	14	6	
+M	142	1002	13	6	
+M	143	1001	1	4	
+M	143	1002	12	6	
+M	145	1002	10	6	
+M	146	1002	10	7	
+M	149	1002	10	10	
+M	151	1002	12	10	
+M	152	1002	13	10	
+M	153	1002	14	10	
+M	157	1002	14	6	
+M	158	1002	13	6	
+M	159	1001	0	4	
+M	163	1001	0	8	
+M	164	1001	1	8	
+M	165	1002	12	6	
+M	166	1001	2	8	
+M	167	1002	10	6	
+M	169	1001	4	8	
+M	170	1001	4	7	
+M	173	1001	4	4	
+M	175	1001	2	4	
+M	176	1001	1	4	
+M	177	1001	0	4	
+M	181	1001	0	8	
+M	182	1001	1	8	
+M	183	1002	10	7	
+M	184	1001	2	8	
+M	186	1002	10	10	
+M	188	1002	12	10	
+M	189	1002	13	10	
+M	190	1001	4	8	
+M	191	1001	4	7	
+M	194	1001	4	4	
+M	196	1001	2	4	
+M	197	1002	14	10	
+M	201	1002	14	6	
+M	202	1002	13	6	
+M	203	1001	1	4	
+M	204	1002	12	6	
+M	205	1001	0	4	
+M	209	1001	0	8	
+M	210	1001	1	8	
+M	212	1002	10	6	
+M	213	1002	10	7	
+M	216	1002	10	10	
+M	218	1002	12	10	
+M	219	1002	13	10	
+M	220	1001	2	8	
+M	221	1002	14	10	
+M	225	1002	14	6	
+M	226	1002	13	6	
+M	228	1001	4	8	
+M	229	1002	12	6	
+M	230	1001	4	7	
+M	231	1002	10	6	
+M	234	1001	4	4	
+M	236	1001	2	4	
+M	237	1001	1	4	
+M	237	1002	10	7	
+M	238	1001	0	4	
+M	240	1002	10	10	
+M	242	1001	0	8	
+M	242	1002	12	10	
+M	243	1001	1	8	
+M	244	1001	2	8	
+M	245	1002	13	10	
+M	246	1001	4	8	
+M	247	1001	4	7	
+M	250	1001	4	4	
+M	252	1001	2	4	
+M	253	1001	1	4	
+M	254	1001	0	4	
+M	258	1001	0	8	
+M	259	1001	1	8	
+M	260	1001	2	8	
+M	261	1002	14	10	
+M	265	1002	14	6	
+M	266	1002	13	6	
+M	267	1002	12	6	
+M	269	1002	10	6	
+M	271	1001	4	8	
+M	272	1001	4	7	
+M	273	1002	10	7	
+M	275	1001	4	4	
+M	277	1001	2	4	
+M	278	1001	1	4	
+M	279	1001	0	4	
+M	281	1002	10	10	
+M	283	1001	0	8	
+M	283	1002	12	10	
+M	284	1001	1	8	
+M	285	1001	2	8	
+M	285	1002	13	10	
+E	1	3002	4	11	{"denominator":-1}
+E	1	3001	10	3	{"denominator":-1}
+E	1	1001	1	8	{"passed":1}
+E	3	1002	13	6	{"passed":1}
+E	5	5001	4	8	{"passed":1}
+E	11	2001	2	4	{"available":0}
+E	11	2001	2	4	{"picked":1}
+E	11	2001	2	4	{"passed":1}
+E	11	1001	2	4	{"payload":[2001]}
+E	12	5002	10	6	{"passed":1}
+E	19	2002	12	10	{"available":0}
+E	19	2002	12	10	{"picked":1}
+E	19	2002	12	10	{"passed":1}
+E	19	1002	12	10	{"payload":[2002]}
+E	25	1001	1	8	{"passed":2}
+E	26	1002	13	6	{"passed":2}
+E	30	5001	4	8	{"passed":2}
+E	35	5002	10	6	{"passed":2}
+E	36	2001	2	4	{"passed":2}
+E	48	2002	12	10	{"passed":2}
+E	55	1002	13	6	{"passed":3}
+E	58	1001	1	8	{"passed":3}
+E	59	5002	10	6	{"passed":3}
+E	65	2002	12	10	{"passed":3}
+E	72	5001	4	8	{"passed":3}
+E	72	1002	13	6	{"passed":4}
+E	79	2001	2	4	{"passed":3}
+E	86	5002	10	6	{"passed":4}
+E	86	1001	1	8	{"passed":4}
+E	89	5001	4	8	{"passed":4}
+E	99	2002	12	10	{"passed":4}
+E	106	2001	2	4	{"passed":4}
+E	106	1002	13	6	{"passed":5}
+E	113	1001	1	8	{"passed":5}
+E	116	5001	4	8	{"passed":5}
+E	122	5002	10	6	{"passed":5}
+E	122	2001	2	4	{"passed":5}
+E	133	1001	1	8	{"passed":6}
+E	136	5001	4	8	{"passed":6}
+E	136	2002	12	10	{"passed":5}
+E	143	2001	2	4	{"passed":6}
+E	143	1002	13	6	{"passed":6}
+E	146	5002	10	6	{"passed":6}
+E	152	2002	12	10	{"passed":6}
+E	165	1002	13	6	{"passed":7}
+E	167	1001	1	8	{"passed":7}
+E	170	5001	4	8	{"passed":7}
+E	176	2001	2	4	{"passed":7}
+E	183	5002	10	6	{"passed":7}
+E	188	1001	1	8	{"passed":8}
+E	190	2002	12	10	{"passed":7}
+E	191	5001	4	8	{"passed":8}
+E	203	2001	2	4	{"passed":8}
+E	204	1002	13	6	{"passed":8}
+E	213	5002	10	6	{"passed":8}
+E	219	2002	12	10	{"passed":8}
+E	220	1001	1	8	{"passed":9}
+E	229	1002	13	6	{"passed":9}
+E	231	5001	4	8	{"passed":9}
+E	237	5002	10	6	{"passed":9}
+E	237	2001	2	4	{"passed":9}
+E	244	1001	1	8	{"passed":10}
+E	246	2002	12	10	{"passed":9}
+E	247	5001	4	8	{"passed":10}
+E	253	2001	2	4	{"passed":10}
+E	260	1001	1	8	{"passed":11}
+E	267	1002	13	6	{"passed":10}
+E	272	5001	4	8	{"passed":11}
+E	277	5002	10	6	{"passed":10}
+E	278	2001	2	4	{"passed":11}
+E	285	2002	12	10	{"passed":10}
+E	285	1001	1	8	{"passed":12}
+E	285	0	0	0	{"final_condition":0,"goal_descriptions":["e24 A delivery point did not get all the packages it was supposed.","e24 A delivery point did not get all the packages it was supposed."],"goal_state":[false,false]}
+
+PLAYER
+

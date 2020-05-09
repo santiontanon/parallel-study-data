@@ -1,0 +1,111 @@
+filename	C:\Users\Mike\AppData\LocalLow\DefaultCompany\ParallelProg\play_out_7336431997612564185.txt
+timestamp	20171010143516
+
+METADATA
+level_id	6
+level_title	Intro to Parallel
+goal_string	Deliver The Package
+goal_struct	{"desired":[{"condition":"gt","thread_id":0,"property":"delivered","id":3001,"type":"delivery","value":0}],"required":[{"condition":"gt","thread_id":0,"property":"delivered","id":3001,"type":"delivery","value":0},{"condition":"gt","thread_id":0,"property":"passed","id":5001,"type":"diverter","value":1}]}
+player_palette	{"painter":{"count":0},"semaphore":{"count":-1},"signal":{"count":-1},"colors":{"count":1}}
+time_pickup_min	0
+time_delivery_min	1
+time_exchange_min	0
+time_pickup_max	0
+time_delivery_max	3
+time_exchange_max	0
+board_width	9
+board_height	8
+
+LAYOUT
+FEEEGEEEC
+J---J---J
+J---J---J
+J---J---J
+J---J---J
+J---J---J
+J---J---J
+LEEEMEEEI
+
+COLORS
+#########
+#---#---#
+#---#---#
+#---#---#
+#---#---#
+#---#---#
+#---#---#
+#########
+
+DIRECTIONS
+XXXXXXXXX
+X   A   X
+X   A   X
+X   A   X
+X   A   X
+X   A   X
+X   A   X
+XXXXXXXXX
+
+COMPONENTS
+1001	thread	0	5	S	L	{"time_pickup_min":-1,"color":1,"initial_direction":"South","missed":0,"time_delivery_max":-1,"delivered":0,"time_exchange_max":-1,"capacity":-1,"time_pickup_max":-1,"delay":0,"picked":0,"time_delivery_min":-1,"passed":0,"time_exchange_min":-1,"direction":"South"}
+1002	thread	8	5	S	L	{"time_pickup_min":-1,"color":2,"initial_direction":"South","missed":0,"time_delivery_max":-1,"delivered":0,"time_exchange_max":-1,"capacity":-1,"time_pickup_max":-1,"delay":0,"picked":0,"time_delivery_min":-1,"passed":0,"time_exchange_min":-1,"direction":"South"}
+2001	pickup	4	4	S	L	{"color":1,"picked":0,"passed":0,"type":"Limited"}
+3001	delivery	6	0	S	L	{"accepted_types":["Limited"],"color":0,"missed":0,"delivered":0,"passed":0,"accepted_colors":[],"strict":0,"consumer":-1,"denominator":1}
+5001	diverter	4	0	S	L	{"color":0,"direction_condition":"West","directions_colors":[[],[],[],[]],"passed":0,"directions_types":[["Empty"],[],["Limited"],[]],"direction_default":"West"}
+
+EXECUTION
+S	55	1001	4	3	{"speed":0.0}
+S	55	1002	4	4	{"speed":0.0}
+M	0	1001	0	5	
+M	0	1002	8	5	
+M	1	1001	0	6	
+M	2	1001	0	7	
+M	6	1001	4	7	
+M	9	1001	4	4	
+M	2	1002	8	6	
+M	10	1001	4	3	
+M	13	1001	4	0	
+M	11	1002	8	7	
+M	15	1002	4	7	
+M	18	1002	4	4	
+M	20	1001	6	0	
+M	21	1001	7	0	
+M	22	1002	4	3	
+M	23	1001	8	0	
+M	30	1001	8	7	
+M	34	1001	4	7	
+M	37	1001	4	4	
+M	25	1002	4	0	
+M	38	1001	4	3	
+M	41	1002	0	0	
+M	48	1002	0	7	
+M	52	1002	4	7	
+M	55	1002	4	4	
+E	1	1001	0	5	{"passed":1}
+E	1	3001	6	0	{"denominator":-1}
+E	9	1002	8	5	{"passed":1}
+E	9	1	4	7	{"passed":1}
+E	10	2001	4	4	{"available":0}
+E	10	2001	4	4	{"picked":1}
+E	10	2001	4	4	{"passed":1}
+E	10	1001	4	4	{"payload":[2001]}
+E	18	1	4	7	{"passed":2}
+E	20	5001	4	0	{"passed":1}
+E	21	3001	6	0	{"delivered":1}
+E	21	3001	6	0	{"passed":1}
+E	21	1001	6	0	{"payload":[]}
+E	21	1001	6	0	{"delivered":1}
+D	21	1001	6	0	{"missed_items":[],"delivered_items":[2001],"delivered_to":3001}
+E	21	0	0	0	{"goals_completed":2}
+E	22	2001	4	4	{"passed":2}
+E	37	1002	8	5	{"passed":2}
+E	37	1	4	7	{"passed":3}
+E	55	1001	0	5	{"passed":2}
+E	55	2001	4	4	{"passed":3}
+E	55	5001	4	0	{"passed":2}
+E	55	1	4	7	{"passed":4}
+E	55	0	0	0	{"goals_completed":3}
+E	55	0	0	0	{"final_condition":10}
+
+PLAYER
+

@@ -1,0 +1,224 @@
+filename	C:\Users\Hyunsoo\AppData\LocalLow\DefaultCompany\ParallelProg\me_out_2432652840033745747.txt
+timestamp	20171019152217
+
+METADATA
+level_id	20
+level_title	Optional Level 2
+goal_string	Deliver all packages indicated in each delivery point.
+goal_struct	{"desired":[],"required":[{"condition":"gt","thread_id":0,"property":"delivered","id":2061,"type":"delivery","value":2},{"condition":"gt","thread_id":0,"property":"delivered","id":2060,"type":"delivery","value":2},{"condition":"gt","thread_id":0,"property":"delivered","id":2047,"type":"delivery","value":2}]}
+player_palette	{"painter":{"count":0},"semaphore":{"count":0},"signal":{"count":0},"colors":{"count":1}}
+time_pickup_min	0
+time_delivery_min	3
+time_exchange_min	1
+time_pickup_max	0
+time_delivery_max	3
+time_exchange_max	1
+board_width	29
+board_height	13
+
+LAYOUT
+FEEEEEEEEEEEEEEEEEEEEEEEEEEEC
+J---------------------------J
+J-------FEEEEEEEEEEEEEEEGEC-J
+J-------J---------------J-J-J
+J-------J-----FEGEGEEEC-J-J-J
+J-------J-----J-J-J---J-J-J-J
+J-------J-----LEI-J---LEK-LEK
+J-------J---------J-----J---J
+J-------J-FEEEEEEEI-----J---J
+J-------J-J-------------J---J
+J-FEEEEEMEMEEEEEEEEEEEEEI---J
+J-J-------------------------J
+LEMEEEEEEEEEEEEEEEEEEEEEEEEEI
+
+COLORS
+                             
+ --------------------------- 
+ -------                   - 
+ ------- --------------- - - 
+ ------- -----         - - - 
+ ------- ----- - - --- - - - 
+ ------- -----   - ---   -   
+ ------- --------- ----- --- 
+ ------- -         ----- --- 
+ ------- - ------------- --- 
+ -                       --- 
+ - ------------------------- 
+                             
+
+DIRECTIONS
+V<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+V                           A
+V       >>>>>>>>>>>>>>>>X>V A
+V       A               V V A
+V       A     V<<<X<<<< V V A
+V       A     V A V   A V V A
+V       A     >>A V   A<X >>X
+V       A         V     V   V
+V       A V<<<<<<<<     V   V
+V       A V             V   V
+V >>>>>>A<<<<<<<<<<<<<<<<   V
+V A                         V
+>>A<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+COMPONENTS
+9015	signal	5	10	P	E	{"color":0,"link":9014,"passed":0}
+9014	semaphore	3	10	P	E	{"stopped":0,"color":0,"passed":0,"value":1}
+1	thread	10	2	S	L	{"time_pickup_min":-1,"color":1,"initial_direction":"East","missed":0,"time_delivery_max":-1,"delivered":0,"time_exchange_max":-1,"capacity":1,"time_pickup_max":-1,"delay":0,"picked":0,"time_delivery_min":-1,"passed":0,"time_exchange_min":-1,"direction":"East"}
+1042	conditional	24	2	S	L	{"current":0,"color":0,"directions":["East","South"],"passed":0}
+1048	conditional	24	6	S	L	{"current":0,"color":0,"directions":["South","West"],"passed":0}
+2050	pickup	20	10	S	L	{"color":1,"picked":0,"passed":0,"type":"Unconditional"}
+2044	pickup	20	4	S	L	{"color":1,"picked":0,"passed":0,"type":"Conditional"}
+2045	pickup	0	11	S	L	{"color":1,"picked":0,"passed":0,"type":"Conditional"}
+2046	pickup	4	12	S	L	{"color":1,"picked":0,"passed":0,"type":"Conditional"}
+2060	delivery	18	10	S	L	{"accepted_types":[],"color":1,"missed":0,"delivered":0,"passed":0,"accepted_colors":[],"strict":0,"consumer":-1,"denominator":3}
+2061	delivery	4	10	S	L	{"accepted_types":[],"color":1,"missed":0,"delivered":0,"passed":0,"accepted_colors":[],"strict":0,"consumer":-1,"denominator":2}
+2047	delivery	18	8	S	L	{"accepted_types":[],"color":1,"missed":0,"delivered":0,"passed":0,"accepted_colors":[1],"strict":0,"consumer":-1,"denominator":3}
+1021	conditional	28	6	S	L	{"current":0,"color":0,"directions":["South","North"],"passed":0}
+1027	signal	10	12	S	L	{"color":0,"link":1029,"passed":0}
+1031	signal	0	6	S	L	{"color":0,"link":1033,"passed":0}
+1033	semaphore	7	12	S	L	{"stopped":0,"color":0,"passed":0,"value":0}
+1029	semaphore	0	8	S	L	{"stopped":0,"color":0,"passed":0,"value":0}
+1041	diverter	18	4	S	L	{"color":0,"direction_condition":"West","directions_colors":[[],[],[],[]],"passed":0,"directions_types":[["Empty"],["Conditional"],[],[]],"direction_default":"West"}
+32	thread	12	2	S	L	{"time_pickup_min":-1,"color":1,"initial_direction":"East","missed":0,"time_delivery_max":-1,"delivered":0,"time_exchange_max":-1,"capacity":1,"time_pickup_max":-1,"delay":0,"picked":0,"time_delivery_min":-1,"passed":0,"time_exchange_min":-1,"direction":"East"}
+9001	semaphore	26	6	P	E	{"stopped":0,"color":0,"passed":0,"value":1}
+9002	signal	27	6	P	E	{"color":0,"link":1021,"passed":0}
+9003	signal	28	5	P	E	{"color":0,"link":9001,"passed":0}
+9004	signal	28	7	P	E	{"color":0,"link":9001,"passed":0}
+9005	signal	0	9	P	E	{"color":0,"link":1042,"passed":0}
+9006	signal	24	5	P	E	{"color":0,"link":1048,"passed":0}
+9007	signal	23	6	P	E	{"color":0,"link":9009,"passed":0}
+9008	signal	24	7	P	E	{"color":0,"link":9009,"passed":0}
+9009	semaphore	24	4	P	E	{"stopped":0,"color":0,"passed":0,"value":1}
+9010	semaphore	21	4	P	E	{"stopped":0,"color":0,"passed":0,"value":1}
+9011	signal	17	8	P	E	{"color":0,"link":9010,"passed":0}
+9012	semaphore	19	10	P	E	{"stopped":0,"color":0,"passed":0,"value":1}
+9013	signal	17	10	P	E	{"color":0,"link":9012,"passed":0}
+
+EXECUTION
+S	142	1	24	3	{"speed":0.0}
+S	142	32	12	2	{"speed":0.0}
+M	0	1	10	2	
+M	0	32	12	2	
+M	1	1	11	2	
+M	1	32	13	2	
+M	12	32	24	2	
+M	14	1	24	2	
+M	15	1	25	2	
+M	15	32	25	2	
+M	16	1	26	2	
+M	16	32	26	2	
+M	20	1	26	6	
+M	21	1	27	6	
+M	22	1	28	6	
+M	23	1	28	5	
+M	24	1	28	4	
+M	24	32	26	6	
+M	25	32	27	6	
+M	28	1	28	0	
+M	56	1	0	0	
+M	62	1	0	6	
+M	63	1	0	7	
+M	63	32	28	6	
+M	64	32	28	7	
+M	65	32	28	8	
+M	69	32	28	12	
+M	87	32	10	12	
+M	88	1	0	8	
+M	88	32	9	12	
+M	89	1	0	9	
+M	90	32	7	12	
+M	91	1	0	10	
+M	91	32	6	12	
+M	92	1	0	11	
+M	93	32	4	12	
+M	94	1	0	12	
+M	94	32	3	12	
+M	95	32	2	12	
+M	96	1	2	12	
+M	97	32	2	10	
+M	98	1	2	10	
+M	99	1	3	10	
+M	100	1	4	10	
+M	101	1	5	10	
+M	102	1	6	10	
+M	102	32	3	10	
+M	103	32	4	10	
+M	104	1	8	10	
+M	112	1	8	2	
+M	114	1	10	2	
+M	115	1	11	2	
+M	115	32	5	10	
+M	116	32	6	10	
+M	128	1	24	2	
+M	129	1	24	3	
+M	130	32	8	10	
+M	138	32	8	2	
+M	142	32	12	2	
+E	1	1	10	2	{"passed":1}
+E	1	2060	18	10	{"denominator":-1}
+E	1	2061	4	10	{"denominator":-1}
+E	1	2047	18	8	{"denominator":-1}
+E	1	32	12	2	{"passed":1}
+E	14	32	12	2	{"passed":2}
+E	15	1042	24	2	{"passed":2}
+E	20	9001	26	6	{"value":0}
+E	21	1021	28	6	{"current":1}
+E	21	9001	26	6	{"passed":1}
+E	22	9002	27	6	{"passed":1}
+E	23	1021	28	6	{"passed":1}
+E	23	9001	26	6	{"value":1}
+E	24	9001	26	6	{"value":0}
+E	24	9003	28	5	{"passed":1}
+E	62	1021	28	6	{"current":0}
+E	62	1033	7	12	{"value":1}
+E	62	9001	26	6	{"passed":2}
+E	63	1031	0	6	{"passed":1}
+E	63	9002	27	6	{"passed":2}
+E	64	1021	28	6	{"passed":2}
+E	64	9001	26	6	{"value":1}
+E	65	9004	28	7	{"passed":1}
+E	87	1029	0	8	{"value":1}
+E	88	1027	10	12	{"passed":1}
+E	88	1029	0	8	{"value":0}
+E	90	1042	24	2	{"current":1}
+E	90	1033	7	12	{"value":0}
+E	90	1029	0	8	{"passed":1}
+E	91	1033	7	12	{"passed":1}
+E	91	9005	0	9	{"passed":1}
+E	94	2045	0	11	{"available":0}
+E	94	2045	0	11	{"picked":1}
+E	94	2045	0	11	{"passed":1}
+E	94	2046	4	12	{"available":0}
+E	94	2046	4	12	{"picked":1}
+E	94	2046	4	12	{"passed":1}
+E	94	1	0	11	{"payload":[2045]}
+E	94	32	4	12	{"payload":[2046]}
+E	99	9014	3	10	{"value":0}
+E	100	9014	3	10	{"passed":1}
+E	101	9014	3	10	{"value":1}
+E	101	2045	0	11	{"available":1}
+E	101	2061	4	10	{"delivered":1}
+E	101	2061	4	10	{"passed":1}
+E	101	1	4	10	{"payload":[]}
+E	101	1	4	10	{"delivered":1}
+D	101	1	4	10	{"missed_items":[],"delivered_items":[2045],"delivered_to":2061}
+E	102	9015	5	10	{"passed":1}
+E	102	9014	3	10	{"value":0}
+E	114	9014	3	10	{"passed":2}
+E	115	9014	3	10	{"value":1}
+E	115	1	10	2	{"passed":2}
+E	115	2046	4	12	{"available":1}
+E	115	2061	4	10	{"delivered":2}
+E	115	2061	4	10	{"passed":2}
+E	115	32	4	10	{"payload":[]}
+E	115	32	4	10	{"delivered":1}
+D	115	32	4	10	{"missed_items":[],"delivered_items":[2046],"delivered_to":2061}
+E	128	9015	5	10	{"passed":2}
+E	128	32	12	2	{"passed":3}
+E	142	1	10	2	{"passed":3}
+E	142	1042	24	2	{"passed":3}
+E	142	0	0	0	{"final_condition":0,"goal_descriptions":["e24 A delivery point did not get all the packages it was supposed.","e24 A delivery point did not get all the packages it was supposed.","e24 A delivery point did not get all the packages it was supposed."],"goal_state":[false,false,false]}
+
+PLAYER
+

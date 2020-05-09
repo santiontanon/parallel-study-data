@@ -1,0 +1,178 @@
+filename	C:\Users\Intel\AppData\LocalLow\DefaultCompany\ParallelProg\me_out_4702897139064859144.txt
+timestamp	20170913132113
+
+METADATA
+level_id	25
+level_title	Optional Level 7
+goal_string	Deliver all packages indicated in each delivery point.
+goal_struct	{"desired":[],"required":[{"condition":"gt","thread_id":0,"property":"delivered","id":2063,"type":"delivery","value":2},{"condition":"gt","thread_id":0,"property":"delivered","id":2041,"type":"delivery","value":2},{"condition":"gt","thread_id":0,"property":"delivered","id":2054,"type":"delivery","value":2}]}
+player_palette	{"painter":{"count":0},"semaphore":{"count":0},"signal":{"count":0},"colors":{"count":1}}
+time_pickup_min	0
+time_delivery_min	3
+time_exchange_min	1
+time_pickup_max	0
+time_delivery_max	3
+time_exchange_max	1
+board_width	39
+board_height	19
+
+LAYOUT
+FEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEC
+J-------------------------------------J
+J---------------------------------FEGEK
+J---------------------------------J-J-J
+J---------------------------------LEI-J
+J-------------------------------------J
+J-------------------------------------J
+J-------------------------------------J
+J-------------------------------------J
+J-------------------------------------J
+J-FEEEEEEEEEEEEEEEEEEEEEEEGEEEEEEEEEEEI
+J-J-----------------------J------------
+J-J-----FEGEGEEEEEEEC-----J------------
+J-J-----J-J-J-------J-----J------------
+J-J-----LEI-J-------LEEEEEK------------
+J-J---------J-------------J------------
+J-J-FEEEEEEEI-------------J------------
+J-J-J---------------------J------------
+LEMEMEEEEEEEEEEEEEEEEEEEEEI------------
+
+COLORS
+                                       
+ ------------------------------------- 
+ ---------------------------------     
+ --------------------------------- - - 
+ ---------------------------------   - 
+ ------------------------------------- 
+ ------------------------------------- 
+ ------------------------------------- 
+ ------------------------------------- 
+ ------------------------------------- 
+ -                                     
+ - ----------------------- ------------
+ - -----             ----- ------------
+ - ----- - - ------- ----- ------------
+ - -----   - -------       ------------
+ - --------- ------------- ------------
+ - -         ------------- ------------
+ - - --------------------- ------------
+                           ------------
+
+DIRECTIONS
+V<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+V                                     A
+V                                 V<<<X
+V                                 V A A
+V                                 >>A A
+V                                     A
+V                                     A
+V                                     A
+V                                     A
+V                                     A
+V >>>>>>>>>>>>>>>>>>>>>>>>X>>>>>>>>>>>A
+V A                       V            
+V A     >>V<X<<<<<<<<     V            
+V A     A V V       A     V            
+V A     A<< V       A<<<<<X            
+V A         V             V            
+V A V<<<<<<<<             V            
+V A V                     V            
+>>A<<<<<<<<<<<<<<<<<<<<<<<<            
+
+COMPONENTS
+9014	semaphore	13	18	P	E	{"stopped":0,"color":0,"passed":0,"value":1}
+9013	signal	11	18	P	E	{"color":0,"link":9014,"passed":0}
+9012	signal	0	1	P	E	{"color":0,"link":9011,"passed":0}
+9011	semaphore	1	0	P	E	{"stopped":0,"color":0,"passed":0,"value":1}
+9007	signal	26	13	P	E	{"color":0,"link":1048,"passed":0}
+9006	signal	25	10	P	E	{"color":0,"link":1037,"passed":0}
+36	thread	18	10	S	L	{"time_pickup_min":-1,"color":1,"initial_direction":"East","missed":0,"time_delivery_max":-1,"delivered":0,"time_exchange_max":-1,"capacity":1,"time_pickup_max":-1,"delay":0,"picked":0,"time_delivery_min":-1,"passed":0,"time_exchange_min":-1,"direction":"East"}
+35	thread	20	10	S	L	{"time_pickup_min":-1,"color":1,"initial_direction":"East","missed":0,"time_delivery_max":-1,"delivered":0,"time_exchange_max":-1,"capacity":1,"time_pickup_max":-1,"delay":0,"picked":0,"time_delivery_min":-1,"passed":0,"time_exchange_min":-1,"direction":"East"}
+34	thread	22	10	S	L	{"time_pickup_min":-1,"color":1,"initial_direction":"East","missed":0,"time_delivery_max":-1,"delivered":0,"time_exchange_max":-1,"capacity":1,"time_pickup_max":-1,"delay":0,"picked":0,"time_delivery_min":-1,"passed":0,"time_exchange_min":-1,"direction":"East"}
+1055	diverter	38	2	S	L	{"color":0,"direction_condition":"West","directions_colors":[[-1],[],[],[1,2,3,4,5,6]],"passed":0,"directions_types":[["Empty"],[],[],["Conditional"]],"direction_default":"West"}
+1050	diverter	12	12	S	L	{"color":0,"direction_condition":"West","directions_colors":[[-1],[1,2,3,4,5,6],[],[]],"passed":0,"directions_types":[["Empty"],["Conditional"],[],[]],"direction_default":"West"}
+2054	delivery	12	16	S	L	{"accepted_types":[],"color":4,"missed":0,"delivered":0,"passed":0,"accepted_colors":[4],"strict":0,"consumer":-1,"denominator":3}
+2041	delivery	12	18	S	L	{"accepted_types":[],"color":1,"missed":0,"delivered":0,"passed":0,"accepted_colors":[],"strict":0,"consumer":-1,"denominator":3}
+2060	pickup	14	12	S	L	{"color":4,"picked":0,"passed":0,"type":"Conditional"}
+2058	pickup	14	18	S	L	{"color":3,"picked":0,"passed":0,"type":"Unconditional"}
+2063	delivery	0	0	S	L	{"accepted_types":[],"color":1,"missed":0,"delivered":0,"passed":0,"accepted_colors":[],"strict":0,"consumer":-1,"denominator":3}
+2053	pickup	30	10	S	L	{"color":2,"picked":0,"passed":0,"type":"Conditional"}
+1048	conditional	26	14	S	L	{"current":0,"color":0,"directions":["West","South"],"passed":0}
+1037	conditional	26	10	S	L	{"current":0,"color":0,"directions":["South","East"],"passed":0}
+1	thread	16	10	S	L	{"time_pickup_min":-1,"color":1,"initial_direction":"East","missed":0,"time_delivery_max":-1,"delivered":0,"time_exchange_max":-1,"capacity":1,"time_pickup_max":-1,"delay":0,"picked":0,"time_delivery_min":-1,"passed":0,"time_exchange_min":-1,"direction":"East"}
+9015	semaphore	12	15	P	E	{"stopped":0,"color":0,"passed":0,"value":1}
+9016	signal	11	16	P	E	{"color":0,"link":9015,"passed":0}
+
+EXECUTION
+S	75	36	26	14	{"speed":0.0}
+S	75	35	1	0	{"speed":0.0}
+S	75	34	36	2	{"speed":0.0}
+S	75	1	26	14	{"speed":0.0}
+M	0	1	16	10	
+M	0	34	22	10	
+M	0	35	20	10	
+M	0	36	18	10	
+M	1	1	17	10	
+M	1	34	23	10	
+M	1	35	21	10	
+M	1	36	19	10	
+M	5	35	25	10	
+M	6	35	26	10	
+M	8	34	25	10	
+M	9	34	26	10	
+M	10	34	27	10	
+M	10	35	27	10	
+M	15	36	25	10	
+M	17	1	25	10	
+M	18	1	26	10	
+M	18	36	26	10	
+M	20	34	30	10	
+M	20	35	30	10	
+M	21	1	26	11	
+M	21	34	31	10	
+M	21	35	31	10	
+M	21	36	26	11	
+M	23	1	26	13	
+M	23	36	26	13	
+M	28	34	38	10	
+M	28	35	38	10	
+M	36	34	38	2	
+M	36	35	38	2	
+M	37	1	26	14	
+M	37	36	26	14	
+M	38	34	36	2	
+M	38	35	38	0	
+M	40	34	34	2	
+M	42	34	34	4	
+M	44	34	36	4	
+M	46	34	36	2	
+M	75	35	1	0	
+E	1	36	18	10	{"passed":1}
+E	1	35	20	10	{"passed":1}
+E	1	34	22	10	{"passed":1}
+E	1	2054	12	16	{"denominator":-1}
+E	1	2041	12	18	{"denominator":-1}
+E	1	2063	0	0	{"denominator":-1}
+E	1	1	16	10	{"passed":1}
+E	5	34	22	10	{"passed":2}
+E	5	1037	26	10	{"current":1}
+E	6	9006	25	10	{"passed":1}
+E	8	1037	26	10	{"current":0}
+E	9	9006	25	10	{"passed":2}
+E	17	36	18	10	{"passed":2}
+E	17	35	20	10	{"passed":3}
+E	17	34	22	10	{"passed":4}
+E	17	1037	26	10	{"passed":2}
+E	20	9006	25	10	{"passed":4}
+E	21	2053	30	10	{"available":0}
+E	21	2053	30	10	{"picked":1}
+E	21	2053	30	10	{"passed":2}
+E	21	1037	26	10	{"passed":4}
+E	21	35	30	10	{"payload":[2053]}
+E	75	9011	1	0	{"value":0}
+E	75	9007	26	13	{"passed":2}
+E	75	1055	38	2	{"passed":2}
+E	75	0	0	0	{"final_condition":132}
+
+PLAYER
+

@@ -1,2 +1,32 @@
 # parallel-study-data
 Data from player playing the game Parallel, to evaluate player modeling systems
+
+
+## Data: 
+Data from the 3-X group was collected before them taking the lecture on parallel concepts, and 5-X was collected after.
+
+## Files: 
+
+- File Format Specification.pdf
+This file contains general information about the file format of the files inside of the "data" folder.
+
+- annotations.xlsx 
+This file contains the ground truth for pplayer modeling.  Each row in the EXCEL file is a time window, and contains a collection of features we calculated (e.g., "number of times they clicked submit", etc.). Those are calculated from the logs, and are the ones we use in our papers.
+The last column is what researchers hand annotated as single-thread / multi-thread / trial-error problem solving: 
+A: Trial & Error
+B: Single Threaded
+C: Multi Threaded
+
+The “log" folder contains the actual logs (one per session) where each line is an in-game event (such as a mouse click). When players "test" or "submit" a level, SubmitCurrentLevelPlay and TriggerLoadLevel events will occur in the log. The corresponding outcome of testing/submitting can be found in the "data" folder.
+
+The "data" folder contains one file for each time someone clicked on "test" or "submit" and contains the output of the ME (these files are referred to from the files in "log" in SubmitCurrentLevelPlay / TriggerLoadLevel events).
+
+
+To cide this data, please cite the following paper:
+
+@inproceedings{kantharaju2018tracing,
+  title={Tracing player knowledge in a parallel programming educational game},
+  author={Kantharaju, Pavan and Alderfer, Katelyn and Zhu, Jichen and Char, Bruce and Smith, Brian and Ontan{\'o}n, Santiago},
+  booktitle={Proceedings of the Fourteenth Artificial Intelligence and Interactive Digital Entertainment Conference (AIIDE 2018)},
+  year={2018}
+}

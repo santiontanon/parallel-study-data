@@ -1,0 +1,79 @@
+filename	C:\Users\Owner1\AppData\LocalLow\DefaultCompany\ParallelProg\me_out_3090080098579687695.txt
+timestamp	20170906143441
+
+METADATA
+level_id	1
+level_title	PCG Level
+goal_string	Deliver all packages indicated in each delivery point.
+goal_struct	{"desired":[],"required":[{"condition":"gt","thread_id":0,"property":"delivered","id":2014,"type":"delivery","value":2}]}
+player_palette	{"painter":{"count":0},"semaphore":{"count":0},"signal":{"count":0},"colors":{"count":1}}
+time_pickup_min	0
+time_delivery_min	3
+time_exchange_min	1
+time_pickup_max	0
+time_delivery_max	3
+time_exchange_max	1
+board_width	11
+board_height	3
+
+LAYOUT
+FEEEEEEEEEC
+J---------J
+LEEEEEEEEEI
+
+COLORS
+           
+ --------- 
+           
+
+DIRECTIONS
+V<<<<<<<<<<
+V         A
+>>>>>>>>>>A
+
+COMPONENTS
+9	thread	4	2	S	L	{"time_pickup_min":-1,"color":1,"initial_direction":"East","missed":0,"time_delivery_max":-1,"delivered":0,"time_exchange_max":-1,"capacity":1,"time_pickup_max":-1,"delay":0,"picked":0,"time_delivery_min":-1,"passed":0,"time_exchange_min":-1,"direction":"East"}
+2015	pickup	8	0	S	L	{"color":1,"picked":0,"passed":0,"type":"Unconditional"}
+2014	delivery	6	0	S	L	{"accepted_types":[],"color":1,"missed":0,"delivered":0,"passed":0,"accepted_colors":[],"strict":0,"consumer":-1,"denominator":3}
+0	thread	2	2	S	L	{"time_pickup_min":-1,"color":1,"initial_direction":"East","missed":0,"time_delivery_max":-1,"delivered":0,"time_exchange_max":-1,"capacity":1,"time_pickup_max":-1,"delay":0,"picked":0,"time_delivery_min":-1,"passed":0,"time_exchange_min":-1,"direction":"East"}
+
+EXECUTION
+S	15	9	5	0	{"speed":0.0}
+S	15	0	5	0	{"speed":0.0}
+M	0	0	2	2	
+M	0	9	4	2	
+M	1	0	3	2	
+M	1	9	5	2	
+M	6	9	10	2	
+M	8	0	10	2	
+M	8	9	10	0	
+M	10	0	10	0	
+M	10	9	8	0	
+M	12	0	8	0	
+M	13	0	7	0	
+M	13	9	7	0	
+M	14	0	6	0	
+M	14	9	6	0	
+M	15	0	5	0	
+M	15	9	5	0	
+E	1	9	4	2	{"passed":1}
+E	1	2014	6	0	{"denominator":-1}
+E	1	0	2	2	{"passed":1}
+E	12	9	4	2	{"passed":2}
+E	13	2015	8	0	{"picked":2}
+E	13	2015	8	0	{"passed":2}
+E	13	9	8	0	{"payload":[2015]}
+E	13	0	8	0	{"payload":[2015]}
+E	15	2014	6	0	{"delivered":1}
+E	15	2014	6	0	{"missed":1}
+E	15	2014	6	0	{"passed":2}
+E	15	9	6	0	{"payload":[]}
+E	15	9	6	0	{"missed":1}
+D	15	9	6	0	{"missed_items":[2015],"delivered_items":[],"delivered_to":2014}
+E	15	0	6	0	{"payload":[]}
+E	15	0	6	0	{"delivered":1}
+D	15	0	6	0	{"missed_items":[],"delivered_items":[2015],"delivered_to":2014}
+E	15	0	0	0	{"final_condition":20}
+
+PLAYER
+

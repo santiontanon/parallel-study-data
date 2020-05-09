@@ -1,0 +1,131 @@
+filename	C:\Users\jjn63\AppData\LocalLow\DefaultCompany\ParallelProg\play_out_119731717966164021.txt
+timestamp	20170801202819
+
+METADATA
+level_id	2
+level_title	More Arrows
+goal_string	Deliver 2 packages per arrow and to each delivery point
+goal_struct	{"desired":[{"condition":"gt","thread_id":0,"property":"delivered","id":3001,"type":"delivery","value":1},{"condition":"gt","thread_id":0,"property":"delivered","id":3002,"type":"delivery","value":1},{"condition":"gt","thread_id":0,"property":"delivered","id":1001,"type":"thread","value":1},{"condition":"gt","thread_id":0,"property":"delivered","id":1002,"type":"thread","value":1}],"required":[{"condition":"gt","thread_id":0,"property":"delivered","id":3001,"type":"delivery","value":1},{"condition":"gt","thread_id":0,"property":"delivered","id":3002,"type":"delivery","value":1}]}
+player_palette	{"painter":{"count":0},"semaphore":{"count":-1},"signal":{"count":-1},"colors":{"count":2}}
+time_pickup_min	0
+time_delivery_min	1
+time_exchange_min	0
+time_pickup_max	0
+time_delivery_max	3
+time_exchange_max	0
+board_width	8
+board_height	8
+
+LAYOUT
+FEEEGEEC
+J---J--J
+J---J--J
+J---J--J
+J---J--J
+J---J--J
+J---J--J
+LEEEMEEI
+
+COLORS
+########
+#---#--#
+#---#--#
+#---#--#
+#---#--#
+#---#--#
+#---#--#
+########
+
+DIRECTIONS
+V<<<X>>V
+V   A  V
+V   A  V
+V   A  V
+V   A  V
+V   A  V
+V   A  V
+>>>>A<<<
+
+COMPONENTS
+9005	signal	2	0	P	E	{"color":0,"link":5001,"passed":0}
+9004	semaphore	4	1	P	E	{"stopped":0,"color":0,"passed":0,"value":1}
+1001	thread	4	2	S	L	{"time_pickup_min":-1,"color":1,"initial_direction":"North","missed":0,"time_delivery_max":-1,"delivered":0,"time_exchange_max":-1,"capacity":-1,"time_pickup_max":-1,"delay":0,"picked":0,"time_delivery_min":-1,"passed":0,"time_exchange_min":-1,"direction":"North"}
+1002	thread	4	5	S	L	{"time_pickup_min":-1,"color":2,"initial_direction":"North","missed":0,"time_delivery_max":-1,"delivered":0,"time_exchange_max":-1,"capacity":-1,"time_pickup_max":-1,"delay":0,"picked":0,"time_delivery_min":-1,"passed":0,"time_exchange_min":-1,"direction":"North"}
+2001	pickup	0	0	S	L	{"color":1,"picked":0,"passed":0,"type":"Conditional"}
+2002	pickup	7	0	S	L	{"color":2,"picked":0,"passed":0,"type":"Conditional"}
+3001	delivery	0	7	S	L	{"accepted_types":["Conditional"],"color":0,"missed":0,"delivered":0,"passed":0,"accepted_colors":[1,2],"strict":0,"consumer":-1,"denominator":2}
+3002	delivery	7	7	S	L	{"accepted_types":["Conditional"],"color":0,"missed":0,"delivered":0,"passed":0,"accepted_colors":[1,2],"strict":0,"consumer":-1,"denominator":2}
+5001	conditional	4	0	S	L	{"current":1,"color":0,"directions":["East","West"],"passed":0}
+4001	intersection	4	7	S	L	{"color":0,"directions":["North","North","North","North","North","North"],"passed":0}
+9003	signal	0	2	P	E	{"color":0,"link":9004,"passed":0}
+
+EXECUTION
+M	0	1001	4	2	
+M	0	1002	4	5	
+M	1	1001	4	1	
+M	2	1002	4	4	
+M	3	1001	4	0	
+M	5	1001	3	0	
+M	6	1001	2	0	
+M	7	1001	1	0	
+M	8	1001	0	0	
+M	9	1001	0	1	
+M	10	1001	0	2	
+M	11	1002	4	1	
+M	12	1001	0	3	
+M	12	1002	4	0	
+M	16	1001	0	7	
+M	17	1001	1	7	
+M	17	1002	5	0	
+M	20	1001	4	7	
+M	25	1001	4	2	
+M	27	1002	7	0	
+M	28	1002	7	1	
+M	34	1002	7	7	
+M	35	1002	6	7	
+M	37	1002	4	7	
+M	39	1002	4	5	
+M	40	1002	4	4	
+E	1	9004	4	1	{"value":0}
+E	1	1001	4	2	{"passed":1}
+E	1	3001	0	7	{"denominator":-1}
+E	1	3002	7	7	{"denominator":-1}
+E	2	1002	4	5	{"passed":1}
+E	4	9004	4	1	{"passed":1}
+E	5	5001	4	0	{"passed":1}
+E	6	5001	4	0	{"current":0}
+E	7	9005	2	0	{"passed":1}
+E	9	2001	0	0	{"available":0}
+E	9	2001	0	0	{"picked":1}
+E	9	2001	0	0	{"passed":1}
+E	9	1001	0	0	{"payload":[2001]}
+E	10	9004	4	1	{"value":1}
+E	11	9004	4	1	{"value":0}
+E	11	1001	4	2	{"passed":2}
+E	12	9004	4	1	{"passed":2}
+E	12	9003	0	2	{"passed":1}
+E	17	2001	0	0	{"available":1}
+E	17	3001	0	7	{"delivered":1}
+E	17	3001	0	7	{"passed":1}
+E	17	5001	4	0	{"passed":2}
+E	17	1001	0	7	{"payload":[]}
+E	17	1001	0	7	{"delivered":1}
+D	17	1001	0	7	{"missed_items":[],"delivered_items":[2001],"delivered_to":3001}
+E	25	1002	4	5	{"passed":2}
+E	25	4001	4	7	{"passed":1}
+E	28	2002	7	0	{"available":0}
+E	28	2002	7	0	{"picked":1}
+E	28	2002	7	0	{"passed":1}
+E	28	1002	7	0	{"payload":[2002]}
+E	35	2002	7	0	{"available":1}
+E	35	3002	7	7	{"delivered":1}
+E	35	3002	7	7	{"passed":1}
+E	35	1002	7	7	{"payload":[]}
+E	35	1002	7	7	{"delivered":1}
+D	35	1002	7	7	{"missed_items":[],"delivered_items":[2002],"delivered_to":3002}
+E	39	4001	4	7	{"passed":2}
+E	40	1002	4	5	{"passed":3}
+E	42	0	0	0	{"final_condition":1}
+
+PLAYER
+

@@ -1,0 +1,77 @@
+filename	C:\Users\BioStream2\AppData\LocalLow\DefaultCompany\ParallelProg\play_out_7752892336764730778.txt
+timestamp	20170902155218
+
+METADATA
+level_id	3
+level_title	Intro to Parallel
+goal_string	Deliver 2 packages
+goal_struct	{"desired":[{"condition":"eq","thread_id":0,"property":"delivered","id":3001,"type":"delivery","value":2}],"required":[{"condition":"eq","thread_id":0,"property":"delivered","id":3001,"type":"delivery","value":2}]}
+player_palette	{"painter":{"count":0},"semaphore":{"count":-1},"signal":{"count":-1},"colors":{"count":1}}
+time_pickup_min	0
+time_delivery_min	1
+time_exchange_min	0
+time_pickup_max	0
+time_delivery_max	3
+time_exchange_max	0
+board_width	8
+board_height	8
+
+LAYOUT
+FEEEEEEC
+J------J
+J------J
+J------J
+J------J
+J------J
+J------J
+LEEEEEEI
+
+COLORS
+!!!!!!!!
+!------!
+!------!
+!------!
+!------!
+!------!
+!------!
+!!!!!!!!
+
+DIRECTIONS
+>>>>>>>V
+A      V
+A      V
+A      V
+A      V
+A      V
+A      V
+A<<<<<<<
+
+COMPONENTS
+4002	semaphore	4	7	S	L	{"stopped":0,"color":0,"passed":0,"value":1}
+4001	semaphore	4	0	S	L	{"stopped":0,"color":0,"passed":0,"value":0}
+3001	delivery	7	3	S	L	{"accepted_types":["Conditional"],"color":0,"missed":0,"delivered":0,"passed":0,"accepted_colors":[],"strict":0,"consumer":-1,"denominator":2}
+2001	pickup	0	3	S	L	{"color":1,"picked":0,"passed":0,"type":"Conditional"}
+1001	thread	7	5	S	L	{"time_pickup_min":-1,"color":1,"initial_direction":"South","missed":0,"time_delivery_max":-1,"delivered":0,"time_exchange_max":-1,"capacity":-1,"time_pickup_max":-1,"delay":0,"picked":0,"time_delivery_min":-1,"passed":0,"time_exchange_min":-1,"direction":"South"}
+
+EXECUTION
+M	0	1001	7	5	
+M	1	1001	7	6	
+M	2	1001	7	7	
+M	5	1001	4	7	
+M	6	1001	3	7	
+M	9	1001	0	7	
+M	13	1001	0	3	
+M	14	1001	0	2	
+M	16	1001	0	0	
+E	0	3001	7	3	{"denominator":-1}
+E	1	1001	7	5	{"passed":1}
+E	5	4002	4	7	{"value":0}
+E	6	4002	4	7	{"passed":1}
+E	14	2001	0	3	{"available":0}
+E	14	2001	0	3	{"picked":1}
+E	14	2001	0	3	{"passed":1}
+E	14	1001	0	3	{"payload":[2001]}
+E	19	0	0	0	{"final_condition":1}
+
+PLAYER
+

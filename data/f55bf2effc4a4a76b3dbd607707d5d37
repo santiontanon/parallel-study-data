@@ -1,0 +1,58 @@
+filename	/Users/josepvalls/Library/Application Support/DefaultCompany/ParallelProg/play_out_4738901580376771632.txt
+timestamp	20170828173305
+
+METADATA
+level_id	13000
+level_title	Intro to Parallel
+goal_string	Each Arrow Delivers Twice
+goal_struct	{"desired":[],"required":[{"condition":"gt","thread_id":0,"property":"delivered","id":1001,"type":"thread","value":1},{"condition":"gt","thread_id":0,"property":"delivered","id":1002,"type":"thread","value":1},{"condition":"gt","thread_id":0,"property":"delivered","id":3001,"type":"delivery","value":3}]}
+player_palette	{"painter":{"count":0},"semaphore":{"count":-1},"signal":{"count":-1},"colors":{"count":1}}
+time_pickup_min	0
+time_delivery_min	1
+time_exchange_min	0
+time_pickup_max	0
+time_delivery_max	3
+time_exchange_max	0
+board_width	5
+board_height	1
+
+LAYOUT
+EEEEE
+
+COLORS
+)))))
+
+DIRECTIONS
+>>>>
+
+COMPONENTS
+3002	delivery	3	0	S	L	{"accepted_types":["Conditional"],"color":0,"missed":0,"delivered":0,"passed":0,"accepted_colors":[1],"strict":0,"consumer":-1,"denominator":4}
+3001	delivery	2	0	S	L	{"accepted_types":["Conditional"],"color":0,"missed":0,"delivered":0,"passed":0,"accepted_colors":[2],"strict":0,"consumer":-1,"denominator":4}
+2001	pickup	1	0	S	L	{"color":1,"picked":0,"passed":0,"type":"Conditional"}
+1001	thread	0	0	S	L	{"time_pickup_min":-1,"color":1,"initial_direction":"East","missed":0,"time_delivery_max":-1,"delivered":0,"time_exchange_max":-1,"capacity":-1,"time_pickup_max":-1,"delay":0,"picked":0,"time_delivery_min":-1,"passed":0,"time_exchange_min":-1,"direction":"East"}
+
+EXECUTION
+M	0	1001	0	0	
+M	1	1001	1	0	
+M	2	1001	2	0	
+M	3	1001	3	0	
+M	4	1001	4	0	
+E	1	3002	3	0	{"denominator":-1}
+E	1	3001	2	0	{"denominator":-1}
+E	1	1001	0	0	{"passed":1}
+E	2	2001	1	0	{"available":0}
+E	2	2001	1	0	{"picked":1}
+E	2	2001	1	0	{"passed":1}
+E	2	1001	1	0	{"payload":[2001]}
+E	3	3001	2	0	{"passed":1}
+E	3	1001	2	0	{"payload":[2001]}
+E	4	3002	3	0	{"delivered":1}
+E	4	3002	3	0	{"passed":1}
+E	4	2001	1	0	{"available":1}
+E	4	1001	3	0	{"payload":[]}
+E	4	1001	3	0	{"delivered":1}
+D	4	1001	3	0	{"missed_items":[],"delivered_items":[2001],"delivered_to":3002}
+E	4	0	0	0	{"final_condition":1}
+
+PLAYER
+

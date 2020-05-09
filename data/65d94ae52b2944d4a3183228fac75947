@@ -1,0 +1,171 @@
+filename	C:\Users\Owner1\AppData\LocalLow\DefaultCompany\ParallelProg\me_out_4222300396267741757.txt
+timestamp	20170906142429
+
+METADATA
+level_id	1
+level_title	PCG Level
+goal_string	Deliver all packages indicated in each delivery point.
+goal_struct	{"desired":[],"required":[{"condition":"gt","thread_id":0,"property":"delivered","id":2016,"type":"delivery","value":2}]}
+player_palette	{"painter":{"count":0},"semaphore":{"count":0},"signal":{"count":0},"colors":{"count":1}}
+time_pickup_min	0
+time_delivery_min	3
+time_exchange_min	1
+time_pickup_max	0
+time_delivery_max	3
+time_exchange_max	1
+board_width	7
+board_height	5
+
+LAYOUT
+FEC-FEC
+J-J-J-J
+J-J-J-J
+J-J-J-J
+LEI-LEI
+
+COLORS
+   -   
+ - - - 
+ - - - 
+ - - - 
+   -   
+
+DIRECTIONS
+>>V V<<
+A V V A
+A V V A
+A V V A
+A<< >>A
+
+COMPONENTS
+2016	delivery	6	2	S	L	{"accepted_types":[],"color":1,"missed":0,"delivered":0,"passed":0,"accepted_colors":[],"strict":0,"consumer":-1,"denominator":3}
+2015	pickup	6	4	S	L	{"color":1,"picked":0,"passed":0,"type":"Conditional"}
+6	thread	4	2	S	L	{"time_pickup_min":-1,"color":1,"initial_direction":"South","missed":0,"time_delivery_max":-1,"delivered":0,"time_exchange_max":-1,"capacity":1,"time_pickup_max":-1,"delay":0,"picked":0,"time_delivery_min":-1,"passed":0,"time_exchange_min":-1,"direction":"South"}
+1	thread	2	2	S	L	{"time_pickup_min":-1,"color":1,"initial_direction":"South","missed":0,"time_delivery_max":-1,"delivered":0,"time_exchange_max":-1,"capacity":1,"time_pickup_max":-1,"delay":0,"picked":0,"time_delivery_min":-1,"passed":0,"time_exchange_min":-1,"direction":"South"}
+
+EXECUTION
+S	97	6	6	1	{"speed":0.0}
+S	97	1	2	3	{"speed":0.0}
+M	0	1	2	2	
+M	0	6	4	2	
+M	1	1	2	3	
+M	1	6	4	3	
+M	2	1	2	4	
+M	2	6	4	4	
+M	4	1	0	4	
+M	4	6	6	4	
+M	8	1	0	0	
+M	10	1	2	0	
+M	12	1	2	2	
+M	13	1	2	3	
+M	13	6	6	3	
+M	14	1	2	4	
+M	14	6	6	2	
+M	16	1	0	4	
+M	20	1	0	0	
+M	22	1	2	0	
+M	24	1	2	2	
+M	25	1	2	3	
+M	25	6	6	1	
+M	26	1	2	4	
+M	26	6	6	0	
+M	28	1	0	4	
+M	28	6	4	0	
+M	30	6	4	2	
+M	32	1	0	0	
+M	34	1	2	0	
+M	36	1	2	2	
+M	37	1	2	3	
+M	37	6	4	3	
+M	38	1	2	4	
+M	38	6	4	4	
+M	40	1	0	4	
+M	40	6	6	4	
+M	44	1	0	0	
+M	46	1	2	0	
+M	48	1	2	2	
+M	49	1	2	3	
+M	49	6	6	3	
+M	50	1	2	4	
+M	50	6	6	2	
+M	52	1	0	4	
+M	56	1	0	0	
+M	58	1	2	0	
+M	60	1	2	2	
+M	61	1	2	3	
+M	61	6	6	1	
+M	62	1	2	4	
+M	62	6	6	0	
+M	64	1	0	4	
+M	64	6	4	0	
+M	66	6	4	2	
+M	68	1	0	0	
+M	70	1	2	0	
+M	72	1	2	2	
+M	73	1	2	3	
+M	73	6	4	3	
+M	74	1	2	4	
+M	74	6	4	4	
+M	76	1	0	4	
+M	76	6	6	4	
+M	80	1	0	0	
+M	82	1	2	0	
+M	84	1	2	2	
+M	85	1	2	3	
+M	85	6	6	3	
+M	86	1	2	4	
+M	86	6	6	2	
+M	88	1	0	4	
+M	92	1	0	0	
+M	94	1	2	0	
+M	96	1	2	2	
+M	97	1	2	3	
+M	97	6	6	1	
+E	1	2016	6	2	{"denominator":-1}
+E	1	6	4	2	{"passed":1}
+E	1	1	2	2	{"passed":1}
+E	13	2015	6	4	{"available":0}
+E	13	2015	6	4	{"picked":1}
+E	13	2015	6	4	{"passed":1}
+E	13	1	2	2	{"passed":2}
+E	13	6	6	4	{"payload":[2015]}
+E	25	2016	6	2	{"delivered":1}
+E	25	2016	6	2	{"passed":1}
+E	25	2015	6	4	{"available":1}
+E	25	1	2	2	{"passed":3}
+E	25	6	6	2	{"payload":[]}
+E	25	6	6	2	{"delivered":1}
+D	25	6	6	2	{"missed_items":[],"delivered_items":[2015],"delivered_to":2016}
+E	37	6	4	2	{"passed":2}
+E	37	1	2	2	{"passed":4}
+E	49	2015	6	4	{"available":0}
+E	49	2015	6	4	{"picked":2}
+E	49	2015	6	4	{"passed":2}
+E	49	1	2	2	{"passed":5}
+E	49	6	6	4	{"payload":[2015]}
+E	61	2016	6	2	{"delivered":2}
+E	61	2016	6	2	{"passed":2}
+E	61	2015	6	4	{"available":1}
+E	61	1	2	2	{"passed":6}
+E	61	6	6	2	{"payload":[]}
+E	61	6	6	2	{"delivered":2}
+D	61	6	6	2	{"missed_items":[],"delivered_items":[2015],"delivered_to":2016}
+E	73	6	4	2	{"passed":3}
+E	73	1	2	2	{"passed":7}
+E	85	2015	6	4	{"available":0}
+E	85	2015	6	4	{"picked":3}
+E	85	2015	6	4	{"passed":3}
+E	85	1	2	2	{"passed":8}
+E	85	6	6	4	{"payload":[2015]}
+E	97	2016	6	2	{"delivered":3}
+E	97	2016	6	2	{"passed":3}
+E	97	2015	6	4	{"available":1}
+E	97	1	2	2	{"passed":9}
+E	97	6	6	2	{"payload":[]}
+E	97	6	6	2	{"delivered":3}
+D	97	6	6	2	{"missed_items":[],"delivered_items":[2015],"delivered_to":2016}
+E	97	0	0	0	{"goals_completed":1}
+E	97	0	0	0	{"final_condition":10}
+
+PLAYER
+

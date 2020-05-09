@@ -1,0 +1,137 @@
+filename	C:\Users\Nico\AppData\LocalLow\DefaultCompany\ParallelProg\play_out_2858059041281227528.txt
+timestamp	20170910121719
+
+METADATA
+level_id	1
+level_title	Testing Exchange 1
+goal_string	Deliver 1 packages
+goal_struct	{"desired":[],"required":[{"condition":"gt","thread_id":0,"property":"exchanged","id":4001,"type":"exchange","value":1}]}
+player_palette	{"painter":{"count":0},"semaphore":{"count":-1},"signal":{"count":-1},"colors":{"count":1}}
+time_pickup_min	0
+time_delivery_min	1
+time_exchange_min	0
+time_pickup_max	0
+time_delivery_max	3
+time_exchange_max	0
+board_width	5
+board_height	11
+
+LAYOUT
+FEEEC
+J---J
+J---J
+J---J
+LEEEI
+-----
+FEEEC
+J---J
+J---J
+J---J
+LEEEI
+
+COLORS
+!!!!!
+!---!
+!---!
+!---!
+!!!!!
+-----
+"""""
+"---"
+"---"
+"---"
+"""""
+
+DIRECTIONS
+X>>>X
+A   V
+A   V
+A   V
+X<<<X
+     
+X>>>X
+A   V
+A   V
+A   V
+X<<<X
+
+COMPONENTS
+1001	thread	4	1	S	L	{"time_pickup_min":-1,"color":1,"initial_direction":"South","missed":0,"time_delivery_max":-1,"delivered":0,"time_exchange_max":-1,"capacity":-1,"time_pickup_max":-1,"delay":0,"picked":0,"time_delivery_min":-1,"passed":0,"time_exchange_min":-1,"direction":"South"}
+1002	thread	4	7	S	L	{"time_pickup_min":-1,"color":2,"initial_direction":"South","missed":0,"time_delivery_max":-1,"delivered":0,"time_exchange_max":-1,"capacity":-1,"time_pickup_max":-1,"delay":0,"picked":0,"time_delivery_min":-1,"passed":0,"time_exchange_min":-1,"direction":"South"}
+2003	pickup	4	2	S	L	{"color":1,"picked":0,"passed":0,"type":"Conditional"}
+3001	delivery	1	6	S	L	{"accepted_types":["Conditional"],"color":0,"missed":0,"delivered":0,"passed":0,"accepted_colors":[],"strict":0,"consumer":-1,"denominator":0}
+4001	exchange	2	0	S	L	{"delay":0,"color":0,"stop":0,"link":4002,"exchanged":0,"passed":0,"strict":1,"value":0}
+4002	exchange	2	10	S	L	{"delay":0,"color":0,"stop":0,"link":4001,"exchanged":0,"passed":0,"strict":1,"value":0}
+
+EXECUTION
+S	45	1001	2	0	{"speed":0.0}
+M	0	1001	4	1	
+M	0	1002	4	7	
+M	1	1002	4	8	
+M	2	1001	4	2	
+M	3	1002	4	10	
+M	5	1002	2	10	
+M	6	1001	4	3	
+M	7	1001	4	4	
+M	11	1001	0	4	
+M	15	1001	0	0	
+M	17	1001	2	0	
+M	18	1002	1	10	
+M	19	1001	3	0	
+M	19	1002	0	10	
+M	23	1002	0	6	
+M	24	1002	1	6	
+M	25	1001	4	0	
+M	26	1001	4	1	
+M	25	1002	2	6	
+M	27	1001	4	2	
+M	28	1002	4	6	
+M	29	1002	4	7	
+M	30	1002	4	8	
+M	31	1001	4	3	
+M	32	1002	4	10	
+M	34	1002	2	10	
+M	35	1001	4	4	
+M	39	1001	0	4	
+M	43	1001	0	0	
+M	45	1001	2	0	
+E	1	1002	4	7	{"passed":1}
+E	1	3001	1	6	{"denominator":-1}
+E	5	1001	4	1	{"passed":1}
+E	5	4002	2	10	{"value":1}
+E	6	2003	4	2	{"available":0}
+E	6	2003	4	2	{"picked":1}
+E	6	2003	4	2	{"passed":1}
+E	6	1001	4	2	{"payload":[2003]}
+E	17	4001	2	0	{"exchanged":1}
+E	17	4002	2	10	{"exchanged":1}
+E	17	4002	2	10	{"value":0}
+E	17	1001	4	3	{"payload":[]}
+E	17	1002	2	10	{"payload":[2003]}
+D	17	1002	2	10	{"exchange_between_b":1001,"exchange_between_a":1002}
+E	18	4002	2	10	{"passed":1}
+E	24	4001	2	0	{"passed":1}
+E	26	2003	4	2	{"available":1}
+E	26	3001	1	6	{"delivered":1}
+E	26	3001	1	6	{"passed":1}
+E	26	1002	1	6	{"payload":[]}
+E	26	1002	1	6	{"delivered":1}
+D	26	1002	1	6	{"missed_items":[],"delivered_items":[2003],"delivered_to":3001}
+E	29	1001	4	1	{"passed":2}
+E	30	1002	4	7	{"passed":2}
+E	34	2003	4	2	{"available":0}
+E	34	2003	4	2	{"picked":2}
+E	34	2003	4	2	{"passed":2}
+E	34	4002	2	10	{"value":1}
+E	34	1001	4	2	{"payload":[2003]}
+E	45	4001	2	0	{"exchanged":2}
+E	45	4002	2	10	{"exchanged":2}
+E	45	4002	2	10	{"value":0}
+E	45	1001	4	3	{"payload":[]}
+E	45	1002	2	10	{"payload":[2003]}
+D	45	1002	2	10	{"exchange_between_b":1001,"exchange_between_a":1002}
+E	45	0	0	0	{"goals_completed":1}
+E	45	0	0	0	{"final_condition":10}
+
+PLAYER
+
