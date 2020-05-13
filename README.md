@@ -26,7 +26,7 @@ If you use this data set, please use the following citation:
 ```
 @misc{zhu2020understanding,
     title={Understanding Learners' Problem-Solving Strategies in Concurrent and Parallel Programming: A Game-Based Approach},
-    author={Jichen Zhu and Katelyn Alderfer and Brian Smith and Bruce Char and Santiago Ontañón},
+    author={Jichen Zhu and Katelyn Alderfer and Brian Smith and Bruce Char and Santiago Onta\~{n}\'{o}n},
     year={2020},
     eprint={2005.04789},
     archivePrefix={arXiv},
