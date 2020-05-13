@@ -21,4 +21,15 @@ The “log" folder contains the actual logs (one per session) where each line is
 
 The "data" folder contains one file for each time someone clicked on "test" or "submit" and contains the output of the ME (these files are referred to from the files in "log" in SubmitCurrentLevelPlay / TriggerLoadLevel events).
 
+If you use this data set, please use the following citation:
 
+```
+@misc{zhu2020understanding,
+    title={Understanding Learners' Problem-Solving Strategies in Concurrent and Parallel Programming: A Game-Based Approach},
+    author={Jichen Zhu and Katelyn Alderfer and Brian Smith and Bruce Char and Santiago Ontañón},
+    year={2020},
+    eprint={2005.04789},
+    archivePrefix={arXiv},
+    primaryClass={cs.HC}
+}
+```
