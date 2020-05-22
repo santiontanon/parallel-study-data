@@ -7,17 +7,17 @@ Data from the 3-X group was collected before them taking the lecture on parallel
 
 ## Files: 
 
-- File Format Specification.pdf
+- File Format Specification.pdf:
 This file contains general information about the file format of the files inside of the "data" folder.
 
-- annotations.xlsx 
+- annotations.xlsx:
 This file contains a full dataset for player modeling (including ground truth), resulting from processing the provided logs.  Each row in the EXCEL file is a time window, and contains a collection of features we calculated (e.g., "number of times they clicked submit", etc.). Those are calculated from the logs, and are the ones we use in our papers.
 The last column is what researchers hand annotated as single-thread / multi-thread / trial-error problem solving: 
 A: Trial & Error
 B: Single Threaded
 C: Multi Threaded
 
-- slices.tsv
+- slices.tsv:
 This file contains just the ground truth annotations of the data (this is a subset of the information in annotations.xlsx). Each row contains a player ID, a level, a time window and the problem solving strategy (A, B, C) that researchers hand annotated for that time interval.
 
 The “log" folder contains the actual logs (one per session) where each line is an in-game event (such as a mouse click). When players "test" or "submit" a level, SubmitCurrentLevelPlay and TriggerLoadLevel events will occur in the log. The corresponding outcome of testing/submitting can be found in the "data" folder.
